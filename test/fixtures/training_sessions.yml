@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  rolls: 1
+  opponents: 1
+  subs: 1
+  taps: 1
+
+two:
+  rolls: 1
+  opponents: 1
+  subs: 1
+  taps: 1
