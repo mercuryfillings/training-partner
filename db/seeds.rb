@@ -18,6 +18,6 @@ Technique.create!(name: 'armbar', user: @user, category: 'submission', position:
 
 p "#{Technique.count} technique(s) created"
 
-TrainingSession.create!(rolls: 5, opponents: 3, subs: 10, taps: 3)
+TrainingSession.create!(user: @user, rolls: 5, opponents: 3, subs: 10, taps: 3)
 
 p "#{TrainingSession.count} training session(s) created"

@@ -84,3 +84,43 @@ FOREIGN KEY ("user_id")
   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
   [1m[36mTechnique Load (0.8ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques"[0m
   [1m[36mTrainingSession Load (0.7ms)[0m  [1m[34mSELECT "training_sessions".* FROM "training_sessions"[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTechnique Load (0.7ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques"[0m
+  [1m[36mTrainingSession Load (0.6ms)[0m  [1m[34mSELECT "training_sessions".* FROM "training_sessions"[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTechnique Load (0.7ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques"[0m
+  [1m[36mTrainingSession Load (1.4ms)[0m  [1m[34mSELECT "training_sessions".* FROM "training_sessions"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "scott.delbango@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (2.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "mercuryfillings"], ["email", "scott.delbango@gmail.com"], ["password_digest", "$2a$12$58V6FrZI9lVpXC5iT2NB5eI937ej39mnXBKPrMvYT8JyTR4xxBbQ2"], ["created_at", "2020-06-10 19:41:13.934083"], ["updated_at", "2020-06-10 19:41:13.934083"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTechnique Create (4.9ms)[0m  [1m[32mINSERT INTO "techniques" ("name", "category", "position", "orientation", "times_executed", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "armbar"], ["category", "submission"], ["position", "guard"], ["orientation", "bottom"], ["times_executed", 1], ["created_at", "2020-06-10 19:41:13.984923"], ["updated_at", "2020-06-10 19:41:13.984923"], ["user_id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "techniques"[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTechnique Load (0.5ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques" WHERE "techniques"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mTechnique Destroy (2.0ms)[0m  [1m[31mDELETE FROM "techniques" WHERE "techniques"."id" = $1[0m  [["id", 1]]
+  [1m[36mTrainingSession Load (0.5ms)[0m  [1m[34mSELECT "training_sessions".* FROM "training_sessions" WHERE "training_sessions"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mUser Destroy (1.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTechnique Load (0.4ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques"[0m
+  [1m[36mTrainingSession Load (4.4ms)[0m  [1m[34mSELECT "training_sessions".* FROM "training_sessions"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "scott.delbango@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "mercuryfillings"], ["email", "scott.delbango@gmail.com"], ["password_digest", "$2a$12$aQZ9ljaBdAXMzyUvP1g6q.W4BpuIdN51DxOttlmbL0GmpINrhSMEq"], ["created_at", "2020-06-10 19:42:46.535807"], ["updated_at", "2020-06-10 19:42:46.535807"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTechnique Create (0.6ms)[0m  [1m[32mINSERT INTO "techniques" ("name", "category", "position", "orientation", "times_executed", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "armbar"], ["category", "submission"], ["position", "guard"], ["orientation", "bottom"], ["times_executed", 1], ["created_at", "2020-06-10 19:42:46.550998"], ["updated_at", "2020-06-10 19:42:46.550998"], ["user_id", 2]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "techniques"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTrainingSession Create (1.2ms)[0m  [1m[32mINSERT INTO "training_sessions" ("rolls", "opponents", "subs", "taps", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["rolls", 5], ["opponents", 3], ["subs", 10], ["taps", 3], ["created_at", "2020-06-10 19:42:46.584331"], ["updated_at", "2020-06-10 19:42:46.584331"], ["user_id", 2]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "training_sessions"[0m
