@@ -1,20 +1,37 @@
-class TechniquesController < ApplicationController
-  before_action :authorize_request, only: [:create, :update, :destroy]
-  before_action :set_technique, only: [:update, :destroy]
+# frozen_string_literal: true
 
-  # GET /techniques
-  def index
-    @techniques = Technique.all
+class TechniquesController < ApplicationController
+  before_action :authorize_request, only: %i[user_show user_index create update destroy]
+  before_action :set_technique, only: %i[update destroy]
+
+  # # GET /techniques
+  # def index
+  #   @techniques = Technique.all
+
+  #   render json: @techniques
+  # end
+
+  # GET techniques from a single user
+  def user_index
+    @techniques = Technique.where(user_id: params[:user_id])
 
     render json: @techniques
   end
 
-  # GET /techniques/1
-  def show
-    @technique = Technique.find(params[:id])
+  # GET single technique from single user
+  def user_show
+    @technique = Technique.where(user_id: params[:user_id], name: params[:name])
 
     render json: @technique
   end
+
+  # # GET /techniques/1
+  # # not sure if this is limiting to user
+  # def show
+  #   @technique = Technique.where(name: params[:name])
+
+  #   render json: @technique
+  # end
 
   # POST /techniques
   def create

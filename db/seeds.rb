@@ -12,9 +12,15 @@ TrainingSession.destroy_all
 
 @user = User.create!({ name: 'mercuryfillings', email: 'scott.delbango@gmail.com', password: '123456' })
 
+@user = User.create!({ name: 'littlejitsboi', email: 'jits@juji.com', password: '123456' })
+
 p "#{User.count} user(s) created"
 
 Technique.create!(name: 'armbar', user: @user, category: 'submission', position: 'guard', orientation: 'bottom', times_executed: 1)
+
+Technique.create!(name: 'armbar', user: @user, category: 'submission', position: 'mount', orientation: 'top', times_executed: 1)
+
+Technique.create!(name: 'omoplata', user: @user, category: 'submission', position: 'guard', orientation: 'bottom', times_executed: 1)
 
 p "#{Technique.count} technique(s) created"
 

@@ -1,24 +1,26 @@
+# frozen_string_literal: true
+
 class TrainingSessionsController < ApplicationController
   before_action :authorize_request, only: %i[create update destroy]
   before_action :set_training_session, only: %i[update destroy]
 
   # GET /training_sessions
   def index
-    @training_sessions = Training_Session.all
+    @training_sessions = TrainingSession.all
 
     render json: @training_sessions
   end
 
   # GET /training_sessions/1
   def show
-    @training_session = Training_Session.find(params[:id])
+    @training_session = TrainingSession.find(params[:id])
 
     render json: @training_session
   end
 
   # POST /training_sessions
   def create
-    @training_session = Training_Session.new(training_session_params)
+    @training_session = TrainingSession.new(training_session_params)
     @training_session.user = @current_user
 
     if @training_session.save
