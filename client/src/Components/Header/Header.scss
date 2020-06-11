@@ -15,7 +15,7 @@
 // $o-fSize--25 : 25px;
 // $o-fSize--28 : 28px;
 // $o-fSize--30 : 30px;
-// $o-fSize--35 : 35px;
+$logo : 35px;
 // $o-fSize--36 : 36px;
 // $o-fSize--44 : 44px;
 // $o-fSize--80 : 80px;
@@ -25,4 +25,28 @@
   height: 90px;
   width: 100vw;
   background-color: blue;
+  display: flex;
+  .logo {
+    font-size: $logo;
+    justify-self: flex-start;
+  }
+
+  @media (min-width: 560px) {
+  .nav-container {
+    display: flex;
+    width: 100%;
+    background-color: orange;
+    justify-content: flex-end;
+    align-items: center;
+    .nav-links {
+    background-color: purple;
+    list-style: none;
+    display: flex;
+    .nav-link {
+      margin: 0 15px;
+    }
+    }
+  }
+  }
 }
+
