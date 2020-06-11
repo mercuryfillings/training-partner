@@ -1,13 +1,10 @@
-import React, { Component } from React
+import React, { Component } from 'react'
 import { slide as Menu } from 'react-burger-menu'
 import './Burger.scss'
 
-class Burger extends Component {
+export default class Burger extends Component {
   showSettings(event) {
     event.preventDefault();
-    .
-    .
-    .
   }
 
   render() {

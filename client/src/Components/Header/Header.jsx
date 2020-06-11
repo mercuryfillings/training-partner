@@ -1,13 +1,16 @@
 import React from 'react'
 import './Header.scss'
+import DesktopNav from '../DesktopNav/desktopNav'
+import Burger from '../Burger/Burger'
 
 export default function Header() {
   return (
-    <header className="header">
+    <header className='header'>
       <div className='logo'>
         TrainingPartner
       </div>
-      {/* add nav ternary */}
+      <Burger className='burger-display'/>
+      <DesktopNav className='desktop-display'/>
     </header>
   )
 }
