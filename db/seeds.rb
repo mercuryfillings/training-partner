@@ -26,4 +26,10 @@ p "#{Technique.count} technique(s) created"
 
 TrainingSession.create!(user: @user, rolls: 5, opponents: 3, subs: 10, taps: 3)
 
+TrainingSession.create!(user: @user, rolls: 10, opponents: 7, subs: 4, taps: 11)
+
+TrainingSession.create!(user: @user, rolls: 12, opponents: 12, subs: 12, taps: 0)
+
+TrainingSession.create!(user: @user, rolls: 6, opponents: 5, subs: 1, taps: 13)
+
 p "#{TrainingSession.count} training session(s) created"

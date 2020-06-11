@@ -3,17 +3,30 @@
 class TrainingSessionsController < ApplicationController
   before_action :authorize_request, only: %i[create update destroy]
   before_action :set_training_session, only: %i[update destroy]
+  # lock user_index & user_show behind authorize_request
 
   # GET /training_sessions
-  def index
-    @training_sessions = TrainingSession.all
+  # def index
+  #   @training_sessions = TrainingSession.all
+
+  #   render json: @training_sessions
+  # end
+
+  # GET /training_sessions/1
+  # def show
+  #   @training_session = TrainingSession.find(params[:id])
+
+  #   render json: @training_session
+  # end
+
+  def user_index
+    @training_sessions = TrainingSession.where(user_id: params[:user_id])
 
     render json: @training_sessions
   end
 
-  # GET /training_sessions/1
-  def show
-    @training_session = TrainingSession.find(params[:id])
+  def user_show
+    @training_session = TrainingSession.where(user_id: params[:user_id], id: params[:id])
 
     render json: @training_session
   end
