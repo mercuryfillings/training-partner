@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
+import Login from '../Login/Login'
 
 export default class Main extends Component {
-  state: {
+
+  state = {
     test: '',
     test2: ''
   }
@@ -9,7 +11,6 @@ export default class Main extends Component {
   render() {
     return (
       <div>
-        hello world
       </div>
     )
   }
