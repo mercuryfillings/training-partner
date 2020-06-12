@@ -9,8 +9,8 @@ import UpdateTech from '../UpdateTech/UpdateTech'
 import ShowTraining from '../ShowTraining/ShowTraining'
 import UpdateTraining from '../UpdateTraining/UpdateTraining'
 import CreateTraining from '../CreateTraining/CreateTraining'
-import { getAllTechs, getOneTech, createTech } from '../../Services/techniques'
-import { getAllTrainings, getOneTraining, createTraining } from '../../Services/trainings'
+import { getAllTechs, getOneTech, createTech, updateTech, deleteTech } from '../../Services/techniques'
+import { getAllTrainings, getOneTraining, createTraining, updateTraining, deleteTraining } from '../../Services/trainings'
 import Home from '../Home/Home'
 
 
@@ -43,14 +43,14 @@ export default class Main extends Component {
   }
 
   putTech = async (id, techData) => {
-    const updatedTechnique = await updateTechnique(id, techData);
+    const updatedTechnique = await updateTech(id, techData);
     this.setState(prevState => ({
       techniques: prevState.techniquess.map(technique => technique.id === id ? updatedTechnique : technique)
     }))
   }
 
   destroyTechnique = async (id) => {
-    await deleteTechnique(id);
+    await deleteTech(id);
     this.setState(prevState => ({
       techniques: prevState.techniques.filter(technique => technique.id !== id)
     }))
