@@ -1,0 +1,15 @@
+.nav-container {
+  display: flex;
+  width: 100%;
+  background-color: orange;
+  justify-content: flex-end;
+  align-items: center;
+  .nav-links {
+  background-color: purple;
+  list-style: none;
+  display: flex;
+  .nav-link {
+    margin: 0 15px;
+  }
+}
+}
