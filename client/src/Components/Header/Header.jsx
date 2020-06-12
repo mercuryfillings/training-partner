@@ -9,7 +9,7 @@ export default function Header() {
       <div className='logo'>
         TrainingPartner
       </div>
-      <Burger className='burger-display'/>
+      {/* <Burger className='burger-display'/> */}
       <DesktopNav className='desktop-display'/>
     </header>
   )

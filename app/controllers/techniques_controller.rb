@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
 class TechniquesController < ApplicationController
-  before_action :authorize_request, only: %i[create update destroy]
+  before_action :authorize_request, only: %i[user_index user_show create update destroy]
   before_action :set_technique, only: %i[update destroy]
   #lock user_index & user_show behind authorize_request
 
-  # # GET /techniques
+  # # GET /techniques - may need to implement this at some point
   # def index
   #   @techniques = Technique.all
 
@@ -62,6 +62,7 @@ class TechniquesController < ApplicationController
 
   private
 
+  #may need to update the below to search by name?
   # Use callbacks to share common setup or constraints between actions.
   def set_technique
     @technique = @current_user.technique.find(params[:id])

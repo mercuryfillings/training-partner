@@ -2227,3 +2227,490 @@ Processing by TrainingSessionsController#user_show as */*
 Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.5ms | Allocations: 1097)
 
 
+Started GET "/api/users/6" for ::1 at 2020-06-12 11:29:41 -0400
+  [1m[35m (5.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"6", "username"=>"joe.e", "email"=>"joey@gmail.com", "password_digest"=>"[FILTERED]", "admin"=>true, "user"=>{"id"=>"6", "email"=>"joey@gmail.com", "password_digest"=>"[FILTERED]"}}
+  [1m[36mUser Load (8.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:46:in `set_user'
+Completed 200 OK in 50ms (Views: 2.7ms | ActiveRecord: 31.1ms | Allocations: 5219)
+
+
+Started GET "/api/techniques/undefined" for ::1 at 2020-06-12 11:30:21 -0400
+Processing by TechniquesController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mTechnique Load (66.7ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques" WHERE "techniques"."user_id" = $1[0m  [["user_id", nil]]
+  ↳ app/controllers/techniques_controller.rb:19:in `user_index'
+Completed 200 OK in 93ms (Views: 4.4ms | ActiveRecord: 73.1ms | Allocations: 2301)
+
+
+Started GET "/api/techniques/undefined" for ::1 at 2020-06-12 11:44:04 -0400
+Processing by TechniquesController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mTechnique Load (1.1ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques" WHERE "techniques"."user_id" = $1[0m  [["user_id", nil]]
+  ↳ app/controllers/techniques_controller.rb:19:in `user_index'
+Completed 200 OK in 27ms (Views: 14.2ms | ActiveRecord: 1.4ms | Allocations: 1051)
+
+
+Started GET "/api/techniques/undefined" for ::1 at 2020-06-12 11:44:06 -0400
+Processing by TechniquesController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mTechnique Load (3.9ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques" WHERE "techniques"."user_id" = $1[0m  [["user_id", nil]]
+  ↳ app/controllers/techniques_controller.rb:19:in `user_index'
+Completed 200 OK in 14ms (Views: 9.5ms | ActiveRecord: 3.9ms | Allocations: 950)
+
+
+Started GET "/api/techniques/undefined" for ::1 at 2020-06-12 11:44:09 -0400
+Processing by TechniquesController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mTechnique Load (1.0ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques" WHERE "techniques"."user_id" = $1[0m  [["user_id", nil]]
+  ↳ app/controllers/techniques_controller.rb:19:in `user_index'
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 1.0ms | Allocations: 959)
+
+
+Started GET "/api/techniques/undefined" for ::1 at 2020-06-12 11:44:17 -0400
+Processing by TechniquesController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mTechnique Load (6.3ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques" WHERE "techniques"."user_id" = $1[0m  [["user_id", nil]]
+  ↳ app/controllers/techniques_controller.rb:19:in `user_index'
+Completed 200 OK in 10ms (Views: 3.2ms | ActiveRecord: 6.3ms | Allocations: 931)
+
+
+Started GET "/api/techniques/undefined" for ::1 at 2020-06-12 11:44:26 -0400
+Processing by TechniquesController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mTechnique Load (7.2ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques" WHERE "techniques"."user_id" = $1[0m  [["user_id", nil]]
+  ↳ app/controllers/techniques_controller.rb:19:in `user_index'
+Completed 200 OK in 10ms (Views: 2.5ms | ActiveRecord: 7.2ms | Allocations: 931)
+
+
+Started GET "/api/techniques/undefined" for ::1 at 2020-06-12 11:48:25 -0400
+Processing by TechniquesController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mTechnique Load (6.0ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques" WHERE "techniques"."user_id" = $1[0m  [["user_id", nil]]
+  ↳ app/controllers/techniques_controller.rb:19:in `user_index'
+Completed 200 OK in 10ms (Views: 2.7ms | ActiveRecord: 6.0ms | Allocations: 931)
+
+
+Started GET "/api/techniques/undefined" for ::1 at 2020-06-12 12:25:41 -0400
+Processing by TechniquesController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mTechnique Load (0.4ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques" WHERE "techniques"."user_id" = $1[0m  [["user_id", nil]]
+  ↳ app/controllers/techniques_controller.rb:19:in `user_index'
+Completed 200 OK in 23ms (Views: 18.8ms | ActiveRecord: 0.7ms | Allocations: 1037)
+
+
+Started GET "/api/techniques/undefined" for ::1 at 2020-06-12 12:26:44 -0400
+Processing by TechniquesController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mTechnique Load (0.4ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques" WHERE "techniques"."user_id" = $1[0m  [["user_id", nil]]
+  ↳ app/controllers/techniques_controller.rb:19:in `user_index'
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.4ms | Allocations: 931)
+
+
+Started GET "/api/techniques/undefined" for ::1 at 2020-06-12 12:26:45 -0400
+Processing by TechniquesController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mTechnique Load (30.8ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques" WHERE "techniques"."user_id" = $1[0m  [["user_id", nil]]
+  ↳ app/controllers/techniques_controller.rb:19:in `user_index'
+Completed 200 OK in 50ms (Views: 16.0ms | ActiveRecord: 30.8ms | Allocations: 934)
+
+
+Started GET "/api/techniques/undefined" for ::1 at 2020-06-12 12:27:11 -0400
+Processing by TechniquesController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mTechnique Load (10.6ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques" WHERE "techniques"."user_id" = $1[0m  [["user_id", nil]]
+  ↳ app/controllers/techniques_controller.rb:19:in `user_index'
+Completed 200 OK in 20ms (Views: 8.8ms | ActiveRecord: 10.6ms | Allocations: 931)
+
+
+Started GET "/api/techniques/undefined" for ::1 at 2020-06-12 12:39:40 -0400
+Started GET "/api/training_sessions/undefined" for ::1 at 2020-06-12 12:39:40 -0400
+Processing by TechniquesController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mTechnique Load (1.8ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques" WHERE "techniques"."user_id" = $1[0m  [["user_id", nil]]
+  ↳ app/controllers/techniques_controller.rb:19:in `user_index'
+Completed 200 OK in 6ms (Views: 3.0ms | ActiveRecord: 2.1ms | Allocations: 1729)
+
+
+Processing by TrainingSessionsController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mTrainingSession Load (5.3ms)[0m  [1m[34mSELECT "training_sessions".* FROM "training_sessions" WHERE "training_sessions"."user_id" = $1[0m  [["user_id", nil]]
+  ↳ app/controllers/training_sessions_controller.rb:25:in `user_index'
+Completed 200 OK in 35ms (Views: 4.7ms | ActiveRecord: 19.0ms | Allocations: 2067)
+
+
+Started GET "/api/techniques/undefined" for ::1 at 2020-06-12 12:39:48 -0400
+Started GET "/api/training_sessions/undefined" for ::1 at 2020-06-12 12:39:48 -0400
+Processing by TechniquesController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Processing by TrainingSessionsController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mTechnique Load (23.2ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques" WHERE "techniques"."user_id" = $1[0m  [["user_id", nil]]
+  ↳ app/controllers/techniques_controller.rb:19:in `user_index'
+Completed 200 OK in 66ms (Views: 42.4ms | ActiveRecord: 23.2ms | Allocations: 1756)
+
+
+  [1m[36mTrainingSession Load (10.2ms)[0m  [1m[34mSELECT "training_sessions".* FROM "training_sessions" WHERE "training_sessions"."user_id" = $1[0m  [["user_id", nil]]
+  ↳ app/controllers/training_sessions_controller.rb:25:in `user_index'
+Completed 200 OK in 46ms (Views: 34.8ms | ActiveRecord: 10.2ms | Allocations: 1953)
+
+
+Started OPTIONS "/api/auth/login" for ::1 at 2020-06-12 12:43:22 -0400
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/api/auth/login"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/techniques/undefined" for ::1 at 2020-06-12 12:49:42 -0400
+Started GET "/api/training_sessions/undefined" for ::1 at 2020-06-12 12:49:42 -0400
+Processing by TechniquesController#user_index as HTML
+Processing by TrainingSessionsController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mTechnique Load (0.7ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques" WHERE "techniques"."user_id" = $1[0m  [["user_id", nil]]
+  [1m[36mTrainingSession Load (0.9ms)[0m  [1m[34mSELECT "training_sessions".* FROM "training_sessions" WHERE "training_sessions"."user_id" = $1[0m  [["user_id", nil]]
+  ↳ app/controllers/techniques_controller.rb:19:in `user_index'
+Completed 200 OK in 18ms (Views: 11.3ms | ActiveRecord: 2.4ms | Allocations: 1925)
+
+
+  ↳ app/controllers/training_sessions_controller.rb:25:in `user_index'
+Completed 200 OK in 12ms (Views: 9.2ms | ActiveRecord: 1.7ms | Allocations: 1915)
+
+
+Started OPTIONS "/api/auth/login" for ::1 at 2020-06-12 12:49:48 -0400
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/api/auth/login"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/techniques/undefined" for ::1 at 2020-06-12 12:51:33 -0400
+Processing by TechniquesController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Started GET "/api/training_sessions/undefined" for ::1 at 2020-06-12 12:51:33 -0400
+Processing by TrainingSessionsController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mTechnique Load (1.0ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques" WHERE "techniques"."user_id" = $1[0m  [["user_id", nil]]
+  ↳ app/controllers/techniques_controller.rb:19:in `user_index'
+Completed 200 OK in 107ms (Views: 104.8ms | ActiveRecord: 1.0ms | Allocations: 2049)
+
+
+  [1m[36mTrainingSession Load (0.6ms)[0m  [1m[34mSELECT "training_sessions".* FROM "training_sessions" WHERE "training_sessions"."user_id" = $1[0m  [["user_id", nil]]
+  ↳ app/controllers/training_sessions_controller.rb:25:in `user_index'
+Completed 200 OK in 28ms (Views: 27.4ms | ActiveRecord: 0.6ms | Allocations: 1957)
+
+
+Started GET "/api/techniques/undefined" for ::1 at 2020-06-12 13:16:17 -0400
+Started GET "/api/training_sessions/undefined" for ::1 at 2020-06-12 13:16:17 -0400
+Processing by TechniquesController#user_index as HTML
+Processing by TrainingSessionsController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mTechnique Load (1.9ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques" WHERE "techniques"."user_id" = $1[0m  [["user_id", nil]]
+  ↳ app/controllers/techniques_controller.rb:19:in `user_index'
+Completed 200 OK in 95ms (Views: 8.0ms | ActiveRecord: 81.1ms | Allocations: 1256)
+
+
+  [1m[36mTrainingSession Load (40.2ms)[0m  [1m[34mSELECT "training_sessions".* FROM "training_sessions" WHERE "training_sessions"."user_id" = $1[0m  [["user_id", nil]]
+  ↳ app/controllers/training_sessions_controller.rb:25:in `user_index'
+Completed 200 OK in 124ms (Views: 5.8ms | ActiveRecord: 117.4ms | Allocations: 2108)
+
+
+Started GET "/api/techniques/undefined" for ::1 at 2020-06-12 13:16:23 -0400
+Processing by TechniquesController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Started GET "/api/training_sessions/undefined" for ::1 at 2020-06-12 13:16:23 -0400
+Processing by TrainingSessionsController#user_index as HTML
+  [1m[36mTechnique Load (2.4ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques" WHERE "techniques"."user_id" = $1[0m  [["user_id", nil]]
+  Parameters: {"user_id"=>"undefined"}
+  ↳ app/controllers/techniques_controller.rb:19:in `user_index'
+Completed 200 OK in 8ms (Views: 5.1ms | ActiveRecord: 2.4ms | Allocations: 1969)
+
+
+  [1m[36mTrainingSession Load (1.0ms)[0m  [1m[34mSELECT "training_sessions".* FROM "training_sessions" WHERE "training_sessions"."user_id" = $1[0m  [["user_id", nil]]
+  ↳ app/controllers/training_sessions_controller.rb:25:in `user_index'
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 1.0ms | Allocations: 1273)
+
+
+Started GET "/api/techniques/undefined" for ::1 at 2020-06-12 13:16:25 -0400
+Started GET "/api/training_sessions/undefined" for ::1 at 2020-06-12 13:16:25 -0400
+Processing by TrainingSessionsController#user_index as HTML
+Processing by TechniquesController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mTechnique Load (0.3ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques" WHERE "techniques"."user_id" = $1[0m  [["user_id", nil]]
+  [1m[36mTrainingSession Load (1.2ms)[0m  [1m[34mSELECT "training_sessions".* FROM "training_sessions" WHERE "training_sessions"."user_id" = $1[0m  [["user_id", nil]]
+  ↳ app/controllers/techniques_controller.rb:19:in `user_index'
+  ↳ app/controllers/training_sessions_controller.rb:25:in `user_index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms | Allocations: 1601)
+
+
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 1.2ms | Allocations: 1908)
+
+
+Started GET "/api/techniques/undefined" for ::1 at 2020-06-12 13:16:31 -0400
+Started GET "/api/training_sessions/undefined" for ::1 at 2020-06-12 13:16:31 -0400
+Processing by TrainingSessionsController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mTrainingSession Load (0.3ms)[0m  [1m[34mSELECT "training_sessions".* FROM "training_sessions" WHERE "training_sessions"."user_id" = $1[0m  [["user_id", nil]]
+  ↳ app/controllers/training_sessions_controller.rb:25:in `user_index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 929)
+
+
+Processing by TechniquesController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mTechnique Load (0.5ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques" WHERE "techniques"."user_id" = $1[0m  [["user_id", nil]]
+  ↳ app/controllers/techniques_controller.rb:19:in `user_index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.5ms | Allocations: 931)
+
+
+Started GET "/api/techniques/undefined" for ::1 at 2020-06-12 13:16:57 -0400
+Processing by TechniquesController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mTechnique Load (0.3ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques" WHERE "techniques"."user_id" = $1[0m  [["user_id", nil]]
+  ↳ app/controllers/techniques_controller.rb:19:in `user_index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms | Allocations: 947)
+
+
+Started GET "/api/training_sessions/undefined" for ::1 at 2020-06-12 13:16:57 -0400
+Processing by TrainingSessionsController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mTrainingSession Load (30.3ms)[0m  [1m[34mSELECT "training_sessions".* FROM "training_sessions" WHERE "training_sessions"."user_id" = $1[0m  [["user_id", nil]]
+  ↳ app/controllers/training_sessions_controller.rb:25:in `user_index'
+Completed 200 OK in 32ms (Views: 1.6ms | ActiveRecord: 30.3ms | Allocations: 929)
+
+
+Started GET "/api/techniques/undefined" for ::1 at 2020-06-12 13:47:39 -0400
+Started GET "/api/training_sessions/undefined" for ::1 at 2020-06-12 13:47:39 -0400
+Processing by TrainingSessionsController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 174)
+
+
+Processing by TechniquesController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 167)
+
+
+Started GET "/api/techniques/undefined" for ::1 at 2020-06-12 13:47:47 -0400
+Started GET "/api/training_sessions/undefined" for ::1 at 2020-06-12 13:47:47 -0400
+Processing by TechniquesController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Processing by TrainingSessionsController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 279)
+
+
+Completed 401 Unauthorized in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 159)
+
+
+Started GET "/api/techniques/undefined" for ::1 at 2020-06-12 13:50:04 -0400
+Started GET "/api/training_sessions/undefined" for ::1 at 2020-06-12 13:50:04 -0400
+Processing by TechniquesController#user_index as HTML
+Processing by TrainingSessionsController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 178)
+
+
+Completed 401 Unauthorized in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 266)
+
+
+Started GET "/api/techniques/undefined" for ::1 at 2020-06-12 13:50:11 -0400
+Started GET "/api/training_sessions/undefined" for ::1 at 2020-06-12 13:50:11 -0400
+Processing by TechniquesController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 132)
+
+
+Processing by TrainingSessionsController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 132)
+
+
+Started GET "/api/techniques/undefined" for ::1 at 2020-06-12 13:50:19 -0400
+Started GET "/api/training_sessions/undefined" for ::1 at 2020-06-12 13:50:19 -0400
+Processing by TechniquesController#user_index as HTML
+Processing by TrainingSessionsController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 266)
+
+
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 178)
+
+
+Started GET "/api/techniques/undefined" for ::1 at 2020-06-12 13:50:24 -0400
+Started GET "/api/training_sessions/undefined" for ::1 at 2020-06-12 13:50:24 -0400
+Processing by TechniquesController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 132)
+
+
+Processing by TrainingSessionsController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 132)
+
+
+Started GET "/api/techniques/undefined" for ::1 at 2020-06-12 13:50:33 -0400
+Started GET "/api/training_sessions/undefined" for ::1 at 2020-06-12 13:50:33 -0400
+Processing by TechniquesController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 132)
+
+
+Processing by TrainingSessionsController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 132)
+
+
+Started GET "/api/techniques/undefined" for ::1 at 2020-06-12 13:50:57 -0400
+Started GET "/api/training_sessions/undefined" for ::1 at 2020-06-12 13:50:57 -0400
+Processing by TechniquesController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Processing by TrainingSessionsController#user_index as HTML
+Completed 401 Unauthorized in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 723)
+
+
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 133)
+
+
+Started GET "/api/techniques/undefined" for ::1 at 2020-06-12 13:51:07 -0400
+Started GET "/api/training_sessions/undefined" for ::1 at 2020-06-12 13:51:07 -0400
+Processing by TechniquesController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 132)
+
+
+Processing by TrainingSessionsController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 132)
+
+
+Started GET "/api/techniques/undefined" for ::1 at 2020-06-12 13:51:17 -0400
+Started GET "/api/training_sessions/undefined" for ::1 at 2020-06-12 13:51:17 -0400
+Processing by TechniquesController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 132)
+
+
+Processing by TrainingSessionsController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 132)
+
+
+Started GET "/api/techniques/undefined" for ::1 at 2020-06-12 13:52:39 -0400
+Started GET "/api/training_sessions/undefined" for ::1 at 2020-06-12 13:52:39 -0400
+Processing by TrainingSessionsController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 132)
+
+
+Processing by TechniquesController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 132)
+
+
+Started GET "/api/techniques/undefined" for ::1 at 2020-06-12 13:52:42 -0400
+Started GET "/api/training_sessions/undefined" for ::1 at 2020-06-12 13:52:42 -0400
+Processing by TechniquesController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 132)
+
+
+Processing by TrainingSessionsController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 132)
+
+
+Started OPTIONS "/api/auth/login" for ::1 at 2020-06-12 14:02:08 -0400
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/api/auth/login"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
