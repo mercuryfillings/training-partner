@@ -35,6 +35,12 @@ export default class Main extends Component {
     this.setState({ techniques });
   }
 
+  // May not need this
+  // getTech = async () => {
+  //   const technique = await getOneTech();
+  //   this.setState({ technique })
+  // }
+
   postTech = async (techData) => {
     const newTechnique = await createTech(techData);
     this.setState(prevState => ({
