@@ -1,21 +1,14 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  resources :users do
-    get '/users/:id', to: 'users#show'
-  end
-  # resources :techniques
-  # resources :training_sessions
-  # resources :techniques do
+  
+  post '/api/auth/login', to: 'authentication#login'
+  get '/api/auth/verify', to: 'authentication#verify'
+  get '/api/techniques/:user_id', to: 'techniques#user_index'
+  get '/api/techniques/:user_id/:name', to: 'techniques#user_show'
+  get '/api/training_sessions/:user_id', to: 'training_sessions#user_index'
+  get '/api/training_sessions/:user_id/:id', to: 'training_sessions#user_show'
+  get '/api/users/:id', to: 'users#show'
     
-  # end
-
-  post '/auth/login', to: 'authentication#login'
-  get '/auth/verify', to: 'authentication#verify'
-  # get '/techniques/', to: 'techniques#index'
-  get '/techniques/:user_id', to: 'techniques#user_index'
-  get '/techniques/:user_id/:name', to: 'techniques#user_show'
-  get '/training_sessions/:user_id', to: 'training_sessions#user_index'
-  get '/training_sessions/:user_id/:id', to: 'training_sessions#user_show'
   
 end
