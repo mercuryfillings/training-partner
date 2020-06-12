@@ -2227,3 +2227,100 @@ Processing by TrainingSessionsController#user_show as */*
 Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.5ms | Allocations: 1097)
 
 
+Started GET "/api/users/6" for ::1 at 2020-06-12 11:29:41 -0400
+  [1m[35m (5.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"6", "username"=>"joe.e", "email"=>"joey@gmail.com", "password_digest"=>"[FILTERED]", "admin"=>true, "user"=>{"id"=>"6", "email"=>"joey@gmail.com", "password_digest"=>"[FILTERED]"}}
+  [1m[36mUser Load (8.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:46:in `set_user'
+Completed 200 OK in 50ms (Views: 2.7ms | ActiveRecord: 31.1ms | Allocations: 5219)
+
+
+Started GET "/api/techniques/undefined" for ::1 at 2020-06-12 11:30:21 -0400
+Processing by TechniquesController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mTechnique Load (66.7ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques" WHERE "techniques"."user_id" = $1[0m  [["user_id", nil]]
+  ↳ app/controllers/techniques_controller.rb:19:in `user_index'
+Completed 200 OK in 93ms (Views: 4.4ms | ActiveRecord: 73.1ms | Allocations: 2301)
+
+
+Started GET "/api/techniques/undefined" for ::1 at 2020-06-12 11:44:04 -0400
+Processing by TechniquesController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mTechnique Load (1.1ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques" WHERE "techniques"."user_id" = $1[0m  [["user_id", nil]]
+  ↳ app/controllers/techniques_controller.rb:19:in `user_index'
+Completed 200 OK in 27ms (Views: 14.2ms | ActiveRecord: 1.4ms | Allocations: 1051)
+
+
+Started GET "/api/techniques/undefined" for ::1 at 2020-06-12 11:44:06 -0400
+Processing by TechniquesController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mTechnique Load (3.9ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques" WHERE "techniques"."user_id" = $1[0m  [["user_id", nil]]
+  ↳ app/controllers/techniques_controller.rb:19:in `user_index'
+Completed 200 OK in 14ms (Views: 9.5ms | ActiveRecord: 3.9ms | Allocations: 950)
+
+
+Started GET "/api/techniques/undefined" for ::1 at 2020-06-12 11:44:09 -0400
+Processing by TechniquesController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mTechnique Load (1.0ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques" WHERE "techniques"."user_id" = $1[0m  [["user_id", nil]]
+  ↳ app/controllers/techniques_controller.rb:19:in `user_index'
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 1.0ms | Allocations: 959)
+
+
+Started GET "/api/techniques/undefined" for ::1 at 2020-06-12 11:44:17 -0400
+Processing by TechniquesController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mTechnique Load (6.3ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques" WHERE "techniques"."user_id" = $1[0m  [["user_id", nil]]
+  ↳ app/controllers/techniques_controller.rb:19:in `user_index'
+Completed 200 OK in 10ms (Views: 3.2ms | ActiveRecord: 6.3ms | Allocations: 931)
+
+
+Started GET "/api/techniques/undefined" for ::1 at 2020-06-12 11:44:26 -0400
+Processing by TechniquesController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mTechnique Load (7.2ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques" WHERE "techniques"."user_id" = $1[0m  [["user_id", nil]]
+  ↳ app/controllers/techniques_controller.rb:19:in `user_index'
+Completed 200 OK in 10ms (Views: 2.5ms | ActiveRecord: 7.2ms | Allocations: 931)
+
+
+Started GET "/api/techniques/undefined" for ::1 at 2020-06-12 11:48:25 -0400
+Processing by TechniquesController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mTechnique Load (6.0ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques" WHERE "techniques"."user_id" = $1[0m  [["user_id", nil]]
+  ↳ app/controllers/techniques_controller.rb:19:in `user_index'
+Completed 200 OK in 10ms (Views: 2.7ms | ActiveRecord: 6.0ms | Allocations: 931)
+
+
+Started GET "/api/techniques/undefined" for ::1 at 2020-06-12 12:25:41 -0400
+Processing by TechniquesController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mTechnique Load (0.4ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques" WHERE "techniques"."user_id" = $1[0m  [["user_id", nil]]
+  ↳ app/controllers/techniques_controller.rb:19:in `user_index'
+Completed 200 OK in 23ms (Views: 18.8ms | ActiveRecord: 0.7ms | Allocations: 1037)
+
+
+Started GET "/api/techniques/undefined" for ::1 at 2020-06-12 12:26:44 -0400
+Processing by TechniquesController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mTechnique Load (0.4ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques" WHERE "techniques"."user_id" = $1[0m  [["user_id", nil]]
+  ↳ app/controllers/techniques_controller.rb:19:in `user_index'
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.4ms | Allocations: 931)
+
+
+Started GET "/api/techniques/undefined" for ::1 at 2020-06-12 12:26:45 -0400
+Processing by TechniquesController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mTechnique Load (30.8ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques" WHERE "techniques"."user_id" = $1[0m  [["user_id", nil]]
+  ↳ app/controllers/techniques_controller.rb:19:in `user_index'
+Completed 200 OK in 50ms (Views: 16.0ms | ActiveRecord: 30.8ms | Allocations: 934)
+
+
+Started GET "/api/techniques/undefined" for ::1 at 2020-06-12 12:27:11 -0400
+Processing by TechniquesController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mTechnique Load (10.6ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques" WHERE "techniques"."user_id" = $1[0m  [["user_id", nil]]
+  ↳ app/controllers/techniques_controller.rb:19:in `user_index'
+Completed 200 OK in 20ms (Views: 8.8ms | ActiveRecord: 10.6ms | Allocations: 931)
+
+

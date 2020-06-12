@@ -1,26 +1,28 @@
-// import api from './api-helper';
+//needs significant work and testing
 
-// export const getAllTechs = async () => {
-//   const resp = await api.get('/foods');
-//   return resp.data;
-// }
+import api from './api-helper';
 
-// export const getOneTech = async (id) => {
-//   const resp = await api.get(`/foods/${id}`);
-//   return resp.data;
-// }
+export const getAllTrainings = async (user_id) => {
+  const resp = await api.get(`/training_sessions/${user_id}`);
+  return resp.data;
+}
 
-// export const createTech = async (foodData) => {
-//   const resp = await api.post('/foods', { food: foodData });
-//   return resp.data;
-// }
+export const getOneTraining = async (user_id, id) => {
+  const resp = await api.get(`/training_sessions/${user_id}/${id}`);
+  return resp.data;
+}
 
-// export const updateTech = async (id, foodData) => {
-//   const resp = await api.put(`/foods/${id}`, { food: foodData });
-//   return resp.data;
-// }
+export const createTraining = async (trainingData) => {
+  const resp = await api.post('/', { training_session: trainingData });
+  return resp.data;
+}
 
-// export const deleteTech = async (id) => {
-//   const resp = await api.delete(`/foods/${id}`);
-//   return resp
-// }
+export const updateTech = async (user_id, id, trainingData) => {
+  const resp = await api.put(`/foods/${id}`, { training_session: trainingData });
+  return resp.data;
+}
+
+export const deleteTech = async (user_id, id) => {
+  const resp = await api.delete(`training_sessions/${user_id}/${id}`);
+  return resp
+}

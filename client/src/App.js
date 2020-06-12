@@ -18,8 +18,8 @@ export default class App extends Component {
     this.setState({ currentUser });
   }
 
-  handleRegisterSubmit = async (registerData) => {
-    const currentUser = await registerUser(registerData);
+  handleSignupSubmit = async (signupData) => {
+    const currentUser = await registerUser(signupData);
     this.setState({ currentUser });
   }
 
@@ -45,7 +45,7 @@ export default class App extends Component {
         />
         <Main
           handleLoginSubmit={this.handleLoginSubmit}
-          handleRegisterSubmit={this.handleRegisterSubmit}
+          handleSignupSubmit={this.handleSignupSubmit}
           currentUser={this.state.currentUser}
         />
       </>

@@ -1,3 +1,5 @@
+//needs significant work and testing
+
 import api from './api-helper';
 
 export const getAllTechs = async (user_id) => {
@@ -15,7 +17,8 @@ export const createTech = async (techData) => {
   return resp.data;
 }
 
-// export const updateTech = async (id, foodData) => {
+//   FOR REFERENCE from Tasteville
+//   export const updateTech = async (id, foodData) => {
 //   const resp = await api.put(`/foods/${id}`, { food: foodData });
 //   return resp.data;
 // }
