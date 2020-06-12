@@ -17,12 +17,12 @@ export const createTraining = async (trainingData) => {
   return resp.data;
 }
 
-export const updateTech = async (user_id, id, trainingData) => {
-  const resp = await api.put(`/foods/${id}`, { training_session: trainingData });
+export const updateTraining = async (user_id, id, trainingData) => {
+  const resp = await api.put(`/training_sessions/${id}`, { training_session: trainingData });
   return resp.data;
 }
 
-export const deleteTech = async (user_id, id) => {
-  const resp = await api.delete(`training_sessions/${user_id}/${id}`);
+export const deleteTraining = async (user_id, id) => {
+  const resp = await api.delete(`/training_sessions/${user_id}/${id}`);
   return resp
 }

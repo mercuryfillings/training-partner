@@ -11,13 +11,13 @@ export default class Main extends Component {
 
   state = {
     techniques: [],
-    trainingSessions: []
+    trainings: []
   }
 
-  componentDidMount() {
-    this.getTechs();
-    this.getTrainings();
-  }
+  // componentDidMount() {
+  //   this.getTechs();
+  //   this.getTrainings();
+  // }
 
   // ============================
   // ======= Techniques =========
@@ -52,6 +52,39 @@ export default class Main extends Component {
             handleSignupSubmit={this.props.handleSignupSubmit}
           />
         )} />
+        <Route path='/techniques' render={() => (
+          <ShowAllTechs />
+        )} />
+        <Route exact path='/trainings' render={(props) => (
+          <ShowTraining
+            {...props}
+            trainings={this.state.trainings}
+            currentUser={this.props.currentUser}
+            destroyTraining={this.destroyTraining}
+          />
+        )} />
+        <Route path='/new/technique' render={(props) => (
+          <CreateTech
+            {...props}
+            postTechnique={this.postTechnique}
+          />
+        )} />
+        <Route path='/technique/:id/edit' render={(props) => {
+          const techId = props.match.params.id;
+          const technique = this.state.techniques.find(technique => technique.id === parseInt(techId));
+          return <UpdateTech
+            {...props}
+            technique={technique}
+            putTechnique={this.putTechnique}
+          />
+        }} />
+        <Route path='/technique/:id' render={(props) => {
+          const techId = props.match.params.id;
+          return <ShowOneTech
+            techId={techId}
+            currentUser={this.props.currentUser}
+          />
+        }} />
       </main>
     )
   }

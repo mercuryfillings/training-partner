@@ -17,13 +17,12 @@ export const createTech = async (techData) => {
   return resp.data;
 }
 
-//   FOR REFERENCE from Tasteville
-//   export const updateTech = async (id, foodData) => {
-//   const resp = await api.put(`/foods/${id}`, { food: foodData });
-//   return resp.data;
-// }
+  export const updateTech = async (id, techData) => {
+  const resp = await api.put(`/techniques/${id}`, { technique: techData });
+  return resp.data;
+}
 
-// export const deleteTech = async (id) => {
-//   const resp = await api.delete(`/foods/${id}`);
-//   return resp
-// }
+export const deleteTech = async (id) => {
+  const resp = await api.delete(`/techniques/${id}`);
+  return resp
+}
