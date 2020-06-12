@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
 class TrainingSessionsController < ApplicationController
-  before_action :authorize_request, only: %i[create update destroy]
+  before_action :authorize_request, only: %i[user_index user_show create update destroy]
   before_action :set_training_session, only: %i[update destroy]
   # lock user_index & user_show behind authorize_request
 
-  # GET /training_sessions
+  # GET /training_sessions - may need to implement this at some point
   # def index
   #   @training_sessions = TrainingSession.all
 

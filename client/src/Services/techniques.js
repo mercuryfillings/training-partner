@@ -13,7 +13,7 @@ export const getOneTech = async (user_id, name) => {
 }
 
 export const createTech = async (techData) => {
-  const resp = await api.post('/techniques', { technique: techData });
+  const resp = await api.post(`/techniques/`, { technique: techData });
   return resp.data;
 }
 

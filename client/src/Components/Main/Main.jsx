@@ -40,7 +40,7 @@ export default class Main extends Component {
   render() {
     return (
       <main>
-        <Route path='/' render={(props) => (
+        <Route path='/login' render={(props) => (
           <Login
             {...props}
             handleLoginSubmit={this.props.handleLoginSubmit}
