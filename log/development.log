@@ -2324,3 +2324,35 @@ Processing by TechniquesController#user_index as HTML
 Completed 200 OK in 20ms (Views: 8.8ms | ActiveRecord: 10.6ms | Allocations: 931)
 
 
+Started GET "/api/techniques/undefined" for ::1 at 2020-06-12 12:39:40 -0400
+Started GET "/api/training_sessions/undefined" for ::1 at 2020-06-12 12:39:40 -0400
+Processing by TechniquesController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mTechnique Load (1.8ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques" WHERE "techniques"."user_id" = $1[0m  [["user_id", nil]]
+  ↳ app/controllers/techniques_controller.rb:19:in `user_index'
+Completed 200 OK in 6ms (Views: 3.0ms | ActiveRecord: 2.1ms | Allocations: 1729)
+
+
+Processing by TrainingSessionsController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mTrainingSession Load (5.3ms)[0m  [1m[34mSELECT "training_sessions".* FROM "training_sessions" WHERE "training_sessions"."user_id" = $1[0m  [["user_id", nil]]
+  ↳ app/controllers/training_sessions_controller.rb:25:in `user_index'
+Completed 200 OK in 35ms (Views: 4.7ms | ActiveRecord: 19.0ms | Allocations: 2067)
+
+
+Started GET "/api/techniques/undefined" for ::1 at 2020-06-12 12:39:48 -0400
+Started GET "/api/training_sessions/undefined" for ::1 at 2020-06-12 12:39:48 -0400
+Processing by TechniquesController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Processing by TrainingSessionsController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mTechnique Load (23.2ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques" WHERE "techniques"."user_id" = $1[0m  [["user_id", nil]]
+  ↳ app/controllers/techniques_controller.rb:19:in `user_index'
+Completed 200 OK in 66ms (Views: 42.4ms | ActiveRecord: 23.2ms | Allocations: 1756)
+
+
+  [1m[36mTrainingSession Load (10.2ms)[0m  [1m[34mSELECT "training_sessions".* FROM "training_sessions" WHERE "training_sessions"."user_id" = $1[0m  [["user_id", nil]]
+  ↳ app/controllers/training_sessions_controller.rb:25:in `user_index'
+Completed 200 OK in 46ms (Views: 34.8ms | ActiveRecord: 10.2ms | Allocations: 1953)
+
+

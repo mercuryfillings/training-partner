@@ -3,7 +3,7 @@ import { Route } from 'react-router-dom';
 import Login from '../Login/Login'
 import Signup from '../Signup/Signup';
 import { getAllTechs, getOneTech, createTech } from '../../Services/techniques'
-import { getAllTrainings, getOneTraining, createTraining } from '../../Services/techniques'
+import { getAllTrainings, getOneTraining, createTraining } from '../../Services/trainings'
 import Home from '../Home/Home'
 
 
@@ -15,14 +15,15 @@ export default class Main extends Component {
   }
 
   componentDidMount() {
-    this.getTechniques();
+    this.getTechs();
+    this.getTrainings();
   }
 
   // ============================
   // ======= Techniques =========
   // ============================
 
-  getAllTechniques = async () => {
+  getTechs = async () => {
     const techniques = await getAllTechs();
     this.setState({ techniques });
   }
@@ -31,7 +32,7 @@ export default class Main extends Component {
   // === Training Sessions ======
   // ============================
 
-  getAllTrainings = async () => {
+  getTrainings = async () => {
     const trainings = await getAllTrainings();
     this.setState({ trainings });
   }
