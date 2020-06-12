@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 export default class Login extends Component {
   state = {
-    username: '',
+    email: '',
     password: ''
   }
 
@@ -15,7 +15,7 @@ export default class Login extends Component {
   }
 
   render() {
-    const { username, password } = this.state;
+    const { email, password } = this.state;
     const { handleLoginSubmit, history } = this.props;
     return (
       <div>
@@ -24,15 +24,15 @@ export default class Login extends Component {
           handleLoginSubmit(this.state);
           history.push('/');
           this.setState({
-            username: "",
+            email: "",
             password: ""
         })
       }}>
           <input
             className=''
             type='text'
-            name='username'
-            value={username}
+            name='email'
+            value={email}
             onChange={this.handleChange}
           />
           <input
@@ -42,6 +42,7 @@ export default class Login extends Component {
             value={password}
             onChange={this.handleChange}
           />
+          <button>Submit</button>
         </form>
       </div>
     )

@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
+import { Route } from 'react-router-dom';
 import Login from '../Login/Login'
+import Signup from '../Signup/Signup';
+
 
 export default class Main extends Component {
 
@@ -7,12 +10,17 @@ export default class Main extends Component {
     test: '',
     test2: ''
   }
-  
+
   render() {
     return (
-      <div>
-        <Login />
-      </div>
+      <main>
+        <Route path='/' render={(props) => (
+          <Login
+            {...props}
+            handleLoginSubmit={this.props.handleLoginSubmit}
+          />
+        )} />
+      </main>
     )
   }
 }
