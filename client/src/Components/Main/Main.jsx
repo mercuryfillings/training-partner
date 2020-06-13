@@ -21,17 +21,26 @@ export default class Main extends Component {
     trainings: []
   }
 
-  // componentDidMount() {
-  //   this.getTechs();
-  //   this.getTrainings();
-  // }
+  componentDidMount() {
+    if (this.props.currentUser) {
+      this.getTechs();
+      this.getTrainings();
+    }
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.currentUser !== this.props.currentUser) {
+      this.getTechs();
+      this.getTrainings();
+    }
+  }
 
   // ============================
   // ======= Techniques =========
   // ============================
 
   getTechs = async () => {
-    const techniques = await getAllTechs();
+    const techniques = await getAllTechs(this.props.currentUser.id);
     this.setState({ techniques });
   }
 
@@ -108,7 +117,11 @@ export default class Main extends Component {
           />
         )} />
         <Route path='/techniques' render={() => (
-          <ShowAllTechs />
+          <ShowAllTechs
+            techniques={this.state.techniques}
+            currentUser={this.props.currentUser}
+            destroyTechnique={this.destroyTechnique}
+          />
         )} />
         <Route path='/technique/:id' render={(props) => {
           const techId = props.match.params.id;
