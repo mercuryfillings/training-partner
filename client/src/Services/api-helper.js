@@ -3,8 +3,7 @@ import axios from 'axios';
 let apiUrl
 
 const apiUrls = {
- //change production url to actual url upon deployment
-  production: 'https://tktktk.herokuapp.com/api',
+  production: 'https://training-partner-api.herokuapp.com/api',
   development: 'http://localhost:3000/api'
 }
 
