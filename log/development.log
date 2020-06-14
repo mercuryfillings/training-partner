@@ -10603,3 +10603,246 @@ Completed 200 OK in 266ms (Views: 257.9ms | ActiveRecord: 5.2ms | Allocations: 4
 Completed 200 OK in 267ms (Views: 7.0ms | ActiveRecord: 4.4ms | Allocations: 4928)
 
 
+Started GET "/api/auth/verify" for ::1 at 2020-06-14 16:45:57 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 30ms (Views: 6.5ms | ActiveRecord: 0.7ms | Allocations: 884)
+
+
+Started GET "/api/training_sessions/undefined" for ::1 at 2020-06-14 16:45:57 -0400
+Started GET "/api/techniques/1" for ::1 at 2020-06-14 16:45:57 -0400
+Processing by TrainingSessionsController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mUser Load (104.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Processing by TechniquesController#user_index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mTrainingSession Load (23.9ms)[0m  [1m[34mSELECT "training_sessions".* FROM "training_sessions" WHERE "training_sessions"."user_id" = $1[0m  [["user_id", nil]]
+  ↳ app/controllers/training_sessions_controller.rb:25:in `user_index'
+Completed 200 OK in 139ms (Views: 5.0ms | ActiveRecord: 128.6ms | Allocations: 2363)
+
+
+  [1m[36mUser Load (22.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mTechnique Load (17.5ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques" WHERE "techniques"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/techniques_controller.rb:19:in `user_index'
+Completed 200 OK in 55ms (Views: 9.7ms | ActiveRecord: 40.0ms | Allocations: 4232)
+
+
+Started GET "/api/auth/verify" for ::1 at 2020-06-14 16:46:04 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 9ms (Views: 2.0ms | ActiveRecord: 1.6ms | Allocations: 884)
+
+
+Started GET "/api/techniques/1" for ::1 at 2020-06-14 16:46:04 -0400
+Started GET "/api/training_sessions/undefined" for ::1 at 2020-06-14 16:46:04 -0400
+Processing by TrainingSessionsController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Processing by TechniquesController#user_index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTrainingSession Load (0.5ms)[0m  [1m[34mSELECT "training_sessions".* FROM "training_sessions" WHERE "training_sessions"."user_id" = $1[0m  [["user_id", nil]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/training_sessions_controller.rb:25:in `user_index'
+Completed 200 OK in 10ms (Views: 5.0ms | ActiveRecord: 1.9ms | Allocations: 2488)
+
+
+  [1m[36mTechnique Load (1.0ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques" WHERE "techniques"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/techniques_controller.rb:19:in `user_index'
+Completed 200 OK in 15ms (Views: 6.3ms | ActiveRecord: 4.5ms | Allocations: 4927)
+
+
+Started GET "/api/auth/verify" for ::1 at 2020-06-14 16:46:10 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (10.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 15ms (Views: 0.9ms | ActiveRecord: 10.5ms | Allocations: 884)
+
+
+Started GET "/api/techniques/1" for ::1 at 2020-06-14 16:46:11 -0400
+Started GET "/api/training_sessions/undefined" for ::1 at 2020-06-14 16:46:11 -0400
+Processing by TechniquesController#user_index as HTML
+  Parameters: {"user_id"=>"1"}
+Processing by TrainingSessionsController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mUser Load (36.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mUser Load (17.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTechnique Load (3.4ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques" WHERE "techniques"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/techniques_controller.rb:19:in `user_index'
+Completed 200 OK in 52ms (Views: 8.7ms | ActiveRecord: 40.1ms | Allocations: 4706)
+
+
+  [1m[36mTrainingSession Load (5.2ms)[0m  [1m[34mSELECT "training_sessions".* FROM "training_sessions" WHERE "training_sessions"."user_id" = $1[0m  [["user_id", nil]]
+  ↳ app/controllers/training_sessions_controller.rb:25:in `user_index'
+Completed 200 OK in 29ms (Views: 2.6ms | ActiveRecord: 22.3ms | Allocations: 4869)
+
+
+Started GET "/api/auth/verify" for ::1 at 2020-06-14 16:46:27 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 7ms (Views: 0.4ms | ActiveRecord: 4.2ms | Allocations: 884)
+
+
+Started GET "/api/techniques/1" for ::1 at 2020-06-14 16:46:27 -0400
+Started GET "/api/training_sessions/undefined" for ::1 at 2020-06-14 16:46:27 -0400
+Processing by TrainingSessionsController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Processing by TechniquesController#user_index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTrainingSession Load (11.9ms)[0m  [1m[34mSELECT "training_sessions".* FROM "training_sessions" WHERE "training_sessions"."user_id" = $1[0m  [["user_id", nil]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/training_sessions_controller.rb:25:in `user_index'
+Completed 200 OK in 51ms (Views: 31.9ms | ActiveRecord: 15.9ms | Allocations: 3057)
+
+
+  [1m[36mTechnique Load (2.4ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques" WHERE "techniques"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/techniques_controller.rb:19:in `user_index'
+Completed 200 OK in 57ms (Views: 8.4ms | ActiveRecord: 5.2ms | Allocations: 4927)
+
+
+Started GET "/api/auth/verify" for ::1 at 2020-06-14 16:46:46 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 1.0ms | Allocations: 884)
+
+
+Started GET "/api/techniques/1" for ::1 at 2020-06-14 16:46:46 -0400
+Started GET "/api/training_sessions/undefined" for ::1 at 2020-06-14 16:46:46 -0400
+Processing by TrainingSessionsController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mTrainingSession Load (0.4ms)[0m  [1m[34mSELECT "training_sessions".* FROM "training_sessions" WHERE "training_sessions"."user_id" = $1[0m  [["user_id", nil]]
+Processing by TechniquesController#user_index as HTML
+  ↳ app/controllers/training_sessions_controller.rb:25:in `user_index'
+  Parameters: {"user_id"=>"1"}
+Completed 200 OK in 317ms (Views: 313.3ms | ActiveRecord: 1.4ms | Allocations: 2196)
+
+
+  [1m[36mUser Load (21.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mTechnique Load (212.2ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques" WHERE "techniques"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/techniques_controller.rb:19:in `user_index'
+Completed 200 OK in 244ms (Views: 6.9ms | ActiveRecord: 233.9ms | Allocations: 3446)
+
+
+Started GET "/api/auth/verify" for ::1 at 2020-06-14 16:46:49 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.5ms | Allocations: 884)
+
+
+Started GET "/api/techniques/1" for ::1 at 2020-06-14 16:46:49 -0400
+Processing by TechniquesController#user_index as HTML
+  Parameters: {"user_id"=>"1"}
+Started GET "/api/training_sessions/undefined" for ::1 at 2020-06-14 16:46:49 -0400
+Processing by TrainingSessionsController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mUser Load (129.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTechnique Load (0.8ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques" WHERE "techniques"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/techniques_controller.rb:19:in `user_index'
+Completed 200 OK in 211ms (Views: 78.5ms | ActiveRecord: 130.1ms | Allocations: 5046)
+
+
+  [1m[36mTrainingSession Load (15.5ms)[0m  [1m[34mSELECT "training_sessions".* FROM "training_sessions" WHERE "training_sessions"."user_id" = $1[0m  [["user_id", nil]]
+  ↳ app/controllers/training_sessions_controller.rb:25:in `user_index'
+Completed 200 OK in 95ms (Views: 2.2ms | ActiveRecord: 18.0ms | Allocations: 4928)
+
+
+Started GET "/api/auth/verify" for ::1 at 2020-06-14 16:46:56 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 884)
+
+
+Started GET "/api/techniques/1" for ::1 at 2020-06-14 16:46:56 -0400
+Processing by TechniquesController#user_index as HTML
+  Parameters: {"user_id"=>"1"}
+Started GET "/api/training_sessions/undefined" for ::1 at 2020-06-14 16:46:56 -0400
+  [1m[36mUser Load (15.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Processing by TrainingSessionsController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mTechnique Load (2.9ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques" WHERE "techniques"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mUser Load (10.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/techniques_controller.rb:19:in `user_index'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 805ms (Views: 782.8ms | ActiveRecord: 18.6ms | Allocations: 4825)
+
+
+  [1m[36mTrainingSession Load (81.6ms)[0m  [1m[34mSELECT "training_sessions".* FROM "training_sessions" WHERE "training_sessions"."user_id" = $1[0m  [["user_id", nil]]
+  ↳ app/controllers/training_sessions_controller.rb:25:in `user_index'
+Completed 200 OK in 868ms (Views: 1.8ms | ActiveRecord: 92.0ms | Allocations: 4236)
+
+
+Started GET "/api/auth/verify" for ::1 at 2020-06-14 16:46:58 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (7.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 86ms (Views: 75.6ms | ActiveRecord: 7.9ms | Allocations: 887)
+
+
+Started GET "/api/techniques/1" for ::1 at 2020-06-14 16:46:59 -0400
+Started GET "/api/training_sessions/undefined" for ::1 at 2020-06-14 16:46:59 -0400
+Processing by TechniquesController#user_index as HTML
+  Parameters: {"user_id"=>"1"}
+Processing by TrainingSessionsController#user_index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mUser Load (9.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mTechnique Load (1.4ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques" WHERE "techniques"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/techniques_controller.rb:19:in `user_index'
+Completed 200 OK in 1532ms (Views: 3.0ms | ActiveRecord: 10.4ms | Allocations: 4712)
+
+
+  [1m[36mTrainingSession Load (10.5ms)[0m  [1m[34mSELECT "training_sessions".* FROM "training_sessions" WHERE "training_sessions"."user_id" = $1[0m  [["user_id", nil]]
+  ↳ app/controllers/training_sessions_controller.rb:25:in `user_index'
+Completed 200 OK in 1532ms (Views: 1.5ms | ActiveRecord: 11.4ms | Allocations: 4937)
+
+
+Started GET "/api/auth/verify" for ::1 at 2020-06-14 16:47:02 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (8.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 12ms (Views: 1.1ms | ActiveRecord: 8.5ms | Allocations: 884)
+
+
+Started GET "/api/techniques/1" for ::1 at 2020-06-14 16:47:02 -0400
+Started GET "/api/training_sessions/undefined" for ::1 at 2020-06-14 16:47:02 -0400
+Processing by TechniquesController#user_index as HTML
+Processing by TrainingSessionsController#user_index as HTML
+  Parameters: {"user_id"=>"1"}
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTechnique Load (11.9ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques" WHERE "techniques"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/techniques_controller.rb:19:in `user_index'
+Completed 200 OK in 425ms (Views: 409.8ms | ActiveRecord: 12.7ms | Allocations: 4085)
+
+
+  [1m[36mTrainingSession Load (26.7ms)[0m  [1m[34mSELECT "training_sessions".* FROM "training_sessions" WHERE "training_sessions"."user_id" = $1[0m  [["user_id", nil]]
+  ↳ app/controllers/training_sessions_controller.rb:25:in `user_index'
+Completed 200 OK in 448ms (Views: 1.9ms | ActiveRecord: 29.5ms | Allocations: 4928)
+
+

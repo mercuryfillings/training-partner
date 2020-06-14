@@ -63,6 +63,8 @@ export default function ShowAllTechs(props) {
 
   return (
     <>
+      <Link to='/new/technique'><button>Add New Technique</button></Link>
+      <br />
       <h3>Your Techniques</h3>
       <h4>Sweeps</h4>
       {
