@@ -3,16 +3,8 @@ import { Link } from 'react-router-dom';
 
 export default function ShowAllTechs(props) {
   const { techniques, currentUser, destroyTechnique, history } = props;
-  let techNames = techniques.map(technique => technique.name)
-  let uniqueNameList = techNames.reduce((unique, technique) => {
-    return unique.includes(technique) ? unique : [...unique, technique]
-  }, [])
 
-  //this is going to be ugly and not DRY, but it works
-  let categoryNames = techniques.map(technique => technique.category)
-  let uniqueCategoryList = categoryNames.reduce((unique, category) => {
-    return unique.includes(category) ? unique : [...unique, category]
-  }, [])
+  //this is ugly and not DRY, but it works
 
   let categorizedTechs = {
     sweep: [],
@@ -32,6 +24,7 @@ export default function ShowAllTechs(props) {
       categorizedTechs.pass.push(technique.name)
     }
   })
+
   let uniqueSubList = categorizedTechs.submission.reduce((unique, submission) => {
     return unique.includes(submission) ? unique : [...unique, submission]
   }, [])
@@ -51,15 +44,6 @@ export default function ShowAllTechs(props) {
     return unique.includes(pass) ? unique : [...unique, pass]
   }, [])
   categorizedTechs.pass = uniquePassList
-
-  console.log(techniques)
-  console.log(categorizedTechs)
-
-
-  //make ULs based on unique category names
-  //make LIs for each technique in category
-  // let sortedObject = {}
-  // console.log(techniques)
 
   return (
     <>

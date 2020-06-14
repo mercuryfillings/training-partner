@@ -44,11 +44,10 @@ export default class Main extends Component {
     this.setState({ techniques });
   }
 
-  // May not need this
-  // getTech = async () => {
-  //   const technique = await getOneTech(this.props.currentUser.id, this.props.);
-  //   this.setState({ technique })
-  // }
+  getSingleTech = async () => {
+    const technique = await getOneTech(this.props.currentUser.id, this.state.techniques.name);
+    this.setState({ technique })
+  }
 
   postTech = async (techData) => {
     const newTechnique = await createTech(techData);
@@ -116,6 +115,10 @@ export default class Main extends Component {
             handleSignupSubmit={this.props.handleSignupSubmit}
           />
         )} />
+        <Route path='/home' render={() => (
+          <Home />
+        )}
+        />
         <Route path='/techniques' render={() => (
           <ShowAllTechs
             techniques={this.state.techniques}
