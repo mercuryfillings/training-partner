@@ -46,7 +46,7 @@ export default class Main extends Component {
 
   // May not need this
   // getTech = async () => {
-  //   const technique = await getOneTech();
+  //   const technique = await getOneTech(this.props.currentUser.id, this.props.);
   //   this.setState({ technique })
   // }
 
