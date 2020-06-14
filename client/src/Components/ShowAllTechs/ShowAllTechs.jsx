@@ -4,32 +4,101 @@ import { Link } from 'react-router-dom';
 export default function ShowAllTechs(props) {
   const { techniques, currentUser, destroyTechnique, history } = props;
   let techNames = techniques.map(technique => technique.name)
-  let uniqueList = techNames.reduce((unique, technique) => {
+  let uniqueNameList = techNames.reduce((unique, technique) => {
     return unique.includes(technique) ? unique : [...unique, technique]
   }, [])
-  
+
+  //this is going to be ugly and not DRY, but it works
+  let categoryNames = techniques.map(technique => technique.category)
+  let uniqueCategoryList = categoryNames.reduce((unique, category) => {
+    return unique.includes(category) ? unique : [...unique, category]
+  }, [])
+
+  let categorizedTechs = {
+    sweep: [],
+    submission: [],
+    escape: [],
+    pass: []
+  }
+
+  techniques.forEach(technique => {
+    if (technique.category === 'submission') {
+      categorizedTechs.submission.push(technique.name)
+    } else if (technique.category === 'sweep') {
+      categorizedTechs.sweep.push(technique.name)
+    } else if (technique.category === 'escape') {
+      categorizedTechs.escape.push(technique.name)
+    } else if (technique.category === 'pass') {
+      categorizedTechs.pass.push(technique.name)
+    }
+  })
+  let uniqueSubList = categorizedTechs.submission.reduce((unique, submission) => {
+    return unique.includes(submission) ? unique : [...unique, submission]
+  }, [])
+  categorizedTechs.submission = uniqueSubList
+
+  let uniqueSweepList = categorizedTechs.sweep.reduce((unique, sweep) => {
+    return unique.includes(sweep) ? unique : [...unique, sweep]
+  }, [])
+  categorizedTechs.sweep = uniqueSweepList
+
+  let uniqueEscapeList = categorizedTechs.escape.reduce((unique, escape) => {
+    return unique.includes(escape) ? unique : [...unique, escape]
+  }, [])
+  categorizedTechs.escape = uniqueEscapeList
+
+  let uniquePassList = categorizedTechs.pass.reduce((unique, pass) => {
+    return unique.includes(pass) ? unique : [...unique, pass]
+  }, [])
+  categorizedTechs.pass = uniquePassList
+
+  console.log(techniques)
+  console.log(categorizedTechs)
+
+
+  //make ULs based on unique category names
+  //make LIs for each technique in category
+  // let sortedObject = {}
+  // console.log(techniques)
+
   return (
     <>
-      <hr />
       <h3>Your Techniques</h3>
+      <h4>Sweeps</h4>
       {
-        uniqueList.map(technique => (
-          <React.Fragment key={technique}>
-            <Link to={`/techniques/${technique}`}>{technique}</Link>
-            {/* {
-              currentUser && currentUser.id === technique.user_id && (
-                <>
-                  <button onClick={() => history.push(`/techniques/${technique.id}/edit`)}>edit</button>
-                  <button onClick={() => destroyTechnique(technique.id)}>delete</button>
-                </>
-              )
-            } */}
-            <br/>
+        categorizedTechs.sweep.map(sweep => (
+          <React.Fragment key={sweep}>
+            <Link to={`/techniques/${sweep}`}>{sweep}</Link>
+            <br />
           </React.Fragment>
-        ))
-      }
+        ))}
       <br />
-      <Link to='/new/technique'><button>Create</button></Link>
+      <h4>Submissions</h4>
+      {
+        categorizedTechs.submission.map(submission => (
+          <React.Fragment key={submission}>
+            <Link to={`/techniques/${submission}`}>{submission}</Link>
+            <br />
+          </React.Fragment>
+        ))}
+      <br />
+      <h4>Guard Passes</h4>
+      {
+        categorizedTechs.pass.map(pass => (
+          <React.Fragment key={pass}>
+            <Link to={`/techniques/${pass}`}>{pass}</Link>
+            <br />
+          </React.Fragment>
+        ))}
+      <br />
+      <h4>Escapes</h4>
+      {
+        categorizedTechs.escape.map(escape => (
+          <React.Fragment key={escape}>
+            <Link to={`/techniques/${escape}`}>{escape}</Link>
+            <br />
+          </React.Fragment>
+        ))}
     </>
   )
 }

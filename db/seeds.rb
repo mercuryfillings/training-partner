@@ -38,7 +38,7 @@ Technique.create!(name: 'clock choke', user: @user, category: 'submission', posi
 
 Technique.create!(name: 'pendulum sweep', user: @user, category: 'sweep', position: 'guard', orientation: 'bottom', times_executed: 1)
 
-Technique.create!(name: 'wrecking ball pass', user: @user, category: 'guard pass', position: 'guard', orientation: 'top', times_executed: 1)
+Technique.create!(name: 'wrecking ball pass', user: @user, category: 'pass', position: 'guard', orientation: 'top', times_executed: 1)
 
 p "#{Technique.count} technique(s) created"
 
