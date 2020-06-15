@@ -5,6 +5,7 @@ export default function ShowAllTechs(props) {
   const { techniques, currentUser, destroyTechnique, history } = props;
 
   //this is ugly and not DRY, but it works
+  //Nevermind, not updating!!
 
   let categorizedTechs = {
     sweep: [],
@@ -13,37 +14,43 @@ export default function ShowAllTechs(props) {
     pass: []
   }
 
-  techniques.forEach(technique => {
-    if (technique.category === 'submission') {
-      categorizedTechs.submission.push(technique.name)
-    } else if (technique.category === 'sweep') {
-      categorizedTechs.sweep.push(technique.name)
-    } else if (technique.category === 'escape') {
-      categorizedTechs.escape.push(technique.name)
-    } else if (technique.category === 'pass') {
-      categorizedTechs.pass.push(technique.name)
-    }
-  })
+  const categorize = () => {
+    techniques.forEach(technique => {
+      if (technique.category.toLowerCase() === 'submission') {
+        categorizedTechs.submission.push(technique.name)
+      } else if (technique.category.toLowerCase() === 'sweep') {
+        categorizedTechs.sweep.push(technique.name)
+      } else if (technique.category.toLowerCase() === 'escape') {
+        categorizedTechs.escape.push(technique.name)
+      } else if (technique.category.toLowerCase() === 'pass') {
+        categorizedTechs.pass.push(technique.name)
+      }
+    })
 
-  let uniqueSubList = categorizedTechs.submission.reduce((unique, submission) => {
-    return unique.includes(submission) ? unique : [...unique, submission]
-  }, [])
-  categorizedTechs.submission = uniqueSubList
+    let uniqueSubList = categorizedTechs.submission.reduce((unique, submission) => {
+      return unique.includes(submission) ? unique : [...unique, submission]
+    }, [])
+    categorizedTechs.submission = uniqueSubList
 
-  let uniqueSweepList = categorizedTechs.sweep.reduce((unique, sweep) => {
-    return unique.includes(sweep) ? unique : [...unique, sweep]
-  }, [])
-  categorizedTechs.sweep = uniqueSweepList
+    let uniqueSweepList = categorizedTechs.sweep.reduce((unique, sweep) => {
+      return unique.includes(sweep) ? unique : [...unique, sweep]
+    }, [])
+    categorizedTechs.sweep = uniqueSweepList
 
-  let uniqueEscapeList = categorizedTechs.escape.reduce((unique, escape) => {
-    return unique.includes(escape) ? unique : [...unique, escape]
-  }, [])
-  categorizedTechs.escape = uniqueEscapeList
+    let uniqueEscapeList = categorizedTechs.escape.reduce((unique, escape) => {
+      return unique.includes(escape) ? unique : [...unique, escape]
+    }, [])
+    categorizedTechs.escape = uniqueEscapeList
 
-  let uniquePassList = categorizedTechs.pass.reduce((unique, pass) => {
-    return unique.includes(pass) ? unique : [...unique, pass]
-  }, [])
-  categorizedTechs.pass = uniquePassList
+    let uniquePassList = categorizedTechs.pass.reduce((unique, pass) => {
+      return unique.includes(pass) ? unique : [...unique, pass]
+    }, [])
+    categorizedTechs.pass = uniquePassList
+  }
+
+  categorize()
+  console.log(techniques)
+  console.log(categorizedTechs)
 
   return (
     <>

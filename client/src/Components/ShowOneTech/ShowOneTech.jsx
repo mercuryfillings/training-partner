@@ -7,7 +7,15 @@ export default class ShowOneTech extends Component {
   }
 
   componentDidMount() {
-    this.setTech()
+    if (this.props.currentUser) {
+      this.setTech()
+    }
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.currentUser !== this.props.currentUser) {
+      this.setTech()
+    }
   }
   
   setTech = async () => {
@@ -17,6 +25,17 @@ export default class ShowOneTech extends Component {
     console.log(currentUser.id)
     console.log(techName)
     console.log(this.state.technique)
+  }
+
+  removeTechnique = async (id) => {
+    this.props.destroyTechnique(id)
+    this.setState(prevState => ({
+      technique: prevState.technique.filter(technique => technique.id !== id)
+    }))
+  }
+
+  handleChange = async (id) => {
+    this.state.technique.id
   }
 
   render() {
@@ -32,8 +51,9 @@ export default class ShowOneTech extends Component {
         technique.map(technique => (
           <React.Fragment key={technique.id}>
             <p>{technique.position}</p>
+            <button onClick={() => this.removeTechnique(technique.id)}>Delete</button>
             <br />
-            <p>{technique.times_executed}</p>
+            <p><p onClick={}>-</p>{technique.times_executed}<p onClick={}>+</p></p>
           </React.Fragment>
         ))}
             </>

@@ -134,6 +134,7 @@ export default class Main extends Component {
           return <ShowOneTech
             techName={techName}
             currentUser={this.props.currentUser}
+            destroyTechnique={this.destroyTechnique}
           />
         }} />
         <Route exact path='/trainings' render={(props) => (
