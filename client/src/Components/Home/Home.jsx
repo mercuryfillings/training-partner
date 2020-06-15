@@ -21,18 +21,35 @@ export default function Home(props) {
   }
 
   return (
-    
-    <>
+
+    <div className="home">
       <h1 className="welcome">Welcome Back, {name}</h1>
-      <h2>Subs</h2>
-      <h3>{totals.subs}</h3>
-      <h2>Taps</h2>
-      <h3>{totals.taps}</h3>
-      <div className="button-container">
-        <button className="button">Add a New Training Session</button>
-        <button className="button">Training History</button>
-        <button className="button">Your Techniques</button>
+      <div className="home-container">
+        <div className="data-container">
+          <select>
+            <option></option>
+            <option></option>
+            <option></option>
+            <option></option>
+            <option></option>
+          </select>
+          <div className="data">
+            <h2 className="item-a">Subs</h2>
+            <div className="circle">
+              <h3>{totals.subs}</h3>
+            </div>
+            <h2 className="item-b">Taps</h2>
+            <div className="circle">
+              <h3 className="item-d">{totals.taps}</h3>
+            </div>
+          </div>
+        </div>
+        <div className="button-container">
+          <button className="button">Add a New Training Session</button>
+          <button className="button">Training History</button>
+          <button className="button">Your Techniques</button>
+        </div>
       </div>
-    </>
+    </div>
   )
 }
