@@ -3,8 +3,6 @@ import React from 'react'
 export default function Home(props) {
   //Can't access name from currentUser
   const { trainings, currentUser, history } = props;
-  console.log(currentUser)
-  console.log(trainings)
 
   let totals = {
     subs: 0,
