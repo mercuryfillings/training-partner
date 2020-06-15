@@ -75,7 +75,7 @@ export default class Main extends Component {
   // ============================
 
   getTrainings = async () => {
-    const trainings = await getAllTrainings();
+    const trainings = await getAllTrainings(this.props.currentUser.id);
     this.setState({ trainings });
   }
 
@@ -116,7 +116,10 @@ export default class Main extends Component {
           />
         )} />
         <Route path='/home' render={() => (
-          <Home />
+          <Home
+            trainings={this.state.trainings}
+            currentUser={this.props.currentUser}
+          />
         )}
         />
         <Route path='/techniques' render={() => (
