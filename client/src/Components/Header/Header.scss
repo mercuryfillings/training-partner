@@ -22,13 +22,16 @@ $logo : 35px;
 // $o-fFamily : "Arial","Farah"
 
 .header {
-  height: 90px;
+  height: 60px;
   width: 100vw;
   background-color: blue;
   display: flex;
+  padding: 15px;
+  margin: 0 0 25px 0;
   .logo {
     font-size: $logo;
     justify-self: flex-start;
+    align-self: center;
   }
   .burger-display {
     display: flex;
@@ -42,6 +45,7 @@ $logo : 35px;
     }
     .desktop-display {
       display: flex;
+      align-self: center;
     }
     
   }

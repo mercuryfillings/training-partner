@@ -9,8 +9,6 @@ export default class CreateTech extends Component {
     times_executed: 1
   }
 
-  
-
   handleChange = (e) => {
     const { name, value } = e.target;
     this.setState({

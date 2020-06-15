@@ -65,7 +65,7 @@ class TechniquesController < ApplicationController
   #may need to update the below to search by name?
   # Use callbacks to share common setup or constraints between actions.
   def set_technique
-    @technique = @current_user.technique.find(params[:id])
+    @technique = @current_user.techniques.find(params[:id])
   end
 
   # Only allow a trusted parameter "white list" through.
