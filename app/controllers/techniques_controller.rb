@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class TechniquesController < ApplicationController
-  before_action :authorize_request, only: %i[user_index user_show create update destroy]
+  before_action :authorize_request, only: %i[create update destroy]
   before_action :set_technique, only: %i[update destroy]
   #lock user_index & user_show behind authorize_request
 
