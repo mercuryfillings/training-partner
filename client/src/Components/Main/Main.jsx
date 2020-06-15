@@ -59,7 +59,7 @@ export default class Main extends Component {
   putTech = async (id, techData) => {
     const updatedTechnique = await updateTech(id, techData);
     this.setState(prevState => ({
-      techniques: prevState.techniquess.map(technique => technique.id === id ? updatedTechnique : technique)
+      techniques: prevState.techniques.map(technique => technique.id === id ? updatedTechnique : technique)
     }))
   }
 
@@ -135,6 +135,7 @@ export default class Main extends Component {
             techName={techName}
             currentUser={this.props.currentUser}
             destroyTechnique={this.destroyTechnique}
+            putTech={this.putTech}
           />
         }} />
         <Route exact path='/trainings' render={(props) => (

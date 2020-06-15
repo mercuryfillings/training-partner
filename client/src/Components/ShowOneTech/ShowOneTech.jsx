@@ -17,7 +17,7 @@ export default class ShowOneTech extends Component {
       this.setTech()
     }
   }
-  
+
   setTech = async () => {
     const { currentUser, techName } = this.props
     const technique = await getOneTech(currentUser.id, techName);
@@ -34,8 +34,18 @@ export default class ShowOneTech extends Component {
     }))
   }
 
-  handleChange = async (id) => {
-    this.state.technique.id
+  handleChange = async (id, operator) => {
+    const tech = this.state.technique.find((tech) => tech.id === id)
+    let updatedTech;
+    if (operator === '+') {
+      updatedTech = { ...tech, times_executed: tech.times_executed + 1 }
+    } else {
+      updatedTech = { ...tech, times_executed: tech.times_executed - 1 }
+    }
+    this.props.putTech(id, updatedTech)
+    this.setState(prevState => ({
+      technique: prevState.technique.map(technique => technique.id === id ? updatedTech : technique)
+    }))
   }
 
   render() {
@@ -48,14 +58,14 @@ export default class ShowOneTech extends Component {
               <h1>{technique[0].name}</h1>
               <h2>Test</h2>
               {
-        technique.map(technique => (
-          <React.Fragment key={technique.id}>
-            <p>{technique.position}</p>
-            <button onClick={() => this.removeTechnique(technique.id)}>Delete</button>
-            <br />
-            <p><p onClick={}>-</p>{technique.times_executed}<p onClick={}>+</p></p>
-          </React.Fragment>
-        ))}
+                technique.map(technique => (
+                  <React.Fragment key={technique.id}>
+                    <p>{technique.position}</p>
+                    <button onClick={() => this.removeTechnique(technique.id)}>Delete</button>
+                    <br />
+                    <p><span onClick={() => this.handleChange(technique.id, '-')}>-</span>{technique.times_executed}<span onClick={() => this.handleChange(technique.id, '+')}>+</span></p>
+                  </React.Fragment>
+                ))}
             </>
           )
         }

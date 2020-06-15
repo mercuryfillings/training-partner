@@ -11,5 +11,6 @@ Rails.application.routes.draw do
   post '/api/users/', to: 'users#create', as: 'user'
   delete '/api/techniques/:id', to: 'techniques#destroy'
   delete '/api/training_session/:id', to: 'training_session#destroy'
+  put '/api/techniques/:id', to: 'techniques#update'
   # resources :users
 end
