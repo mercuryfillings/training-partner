@@ -70,6 +70,6 @@ class TechniquesController < ApplicationController
 
   # Only allow a trusted parameter "white list" through.
   def technique_params
-    params.require(:technique).permit(:name)
+    params.require(:technique).permit(:name, :category, :position, :orientation)
   end
 end

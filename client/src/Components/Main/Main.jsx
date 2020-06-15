@@ -153,7 +153,7 @@ export default class Main extends Component {
         <Route path='/new/technique' render={(props) => (
           <CreateTech
             {...props}
-            postTechnique={this.postTechnique}
+            postTech={this.postTech}
           />
         )} />
         <Route path='/technique/:id/edit' render={(props) => {
