@@ -126,10 +126,10 @@ export default class Main extends Component {
             destroyTechnique={this.destroyTechnique}
           />
         )} />
-        <Route path='/technique/:id' render={(props) => {
-          const techId = props.match.params.id;
+        <Route path='/technique/:name' render={(props) => {
+          const techName = props.match.params.name
           return <ShowOneTech
-            techId={techId}
+            techName={techName}
             currentUser={this.props.currentUser}
           />
         }} />

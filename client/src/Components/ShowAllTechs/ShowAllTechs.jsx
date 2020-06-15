@@ -54,7 +54,7 @@ export default function ShowAllTechs(props) {
       {
         categorizedTechs.sweep.map(sweep => (
           <React.Fragment key={sweep}>
-            <Link to={`/techniques/${sweep}`}>{sweep}</Link>
+            <Link to={`/technique/${sweep}`}>{sweep}</Link>
             <br />
           </React.Fragment>
         ))}
@@ -63,7 +63,7 @@ export default function ShowAllTechs(props) {
       {
         categorizedTechs.submission.map(submission => (
           <React.Fragment key={submission}>
-            <Link to={`/techniques/${submission}`}>{submission}</Link>
+            <Link to={`/technique/${submission}`}>{submission}</Link>
             <br />
           </React.Fragment>
         ))}
@@ -72,7 +72,7 @@ export default function ShowAllTechs(props) {
       {
         categorizedTechs.pass.map(pass => (
           <React.Fragment key={pass}>
-            <Link to={`/techniques/${pass}`}>{pass}</Link>
+            <Link to={`/technique/${pass}`}>{pass}</Link>
             <br />
           </React.Fragment>
         ))}
@@ -81,7 +81,7 @@ export default function ShowAllTechs(props) {
       {
         categorizedTechs.escape.map(escape => (
           <React.Fragment key={escape}>
-            <Link to={`/techniques/${escape}`}>{escape}</Link>
+            <Link to={`/technique/${escape}`}>{escape}</Link>
             <br />
           </React.Fragment>
         ))}
