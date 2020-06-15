@@ -1,4 +1,5 @@
 import React from 'react'
+import './Home.scss'
 
 export default function Home(props) {
   const { trainings, currentUser } = props;
@@ -27,9 +28,11 @@ export default function Home(props) {
       <h3>{totals.subs}</h3>
       <h2>Taps</h2>
       <h3>{totals.taps}</h3>
-      <button>Add a New Training Session</button>
-      <button>Training History</button>
-      <button>Your Techniques</button>
+      <div className="button-container">
+        <button className="button">Add a New Training Session</button>
+        <button className="button">Training History</button>
+        <button className="button">Your Techniques</button>
+      </div>
     </>
   )
 }
