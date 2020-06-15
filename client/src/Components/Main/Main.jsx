@@ -10,8 +10,9 @@ import ShowTraining from '../ShowTraining/ShowTraining'
 import UpdateTraining from '../UpdateTraining/UpdateTraining'
 import CreateTraining from '../CreateTraining/CreateTraining'
 import { getAllTechs, getOneTech, createTech, updateTech, deleteTech } from '../../Services/techniques'
-import { getAllTrainings, getOneTraining, createTraining, updateTraining, deleteTraining } from '../../Services/trainings'
+import { getAllTrainings, createTraining, updateTraining, deleteTraining } from '../../Services/trainings'
 import Home from '../Home/Home'
+import Footer from '../Footer/Footer'
 
 
 export default class Main extends Component {
@@ -167,7 +168,6 @@ export default class Main extends Component {
             putTechnique={this.putTechnique}
           />
         }} />
-
       </main>
     )
   }
