@@ -22,17 +22,24 @@ export default class ShowOneTech extends Component {
   render() {
     const { technique } = this.state;
     return (
-      <div>
+      <>
         {
           technique && (
             <>
               <h1>{technique[0].name}</h1>
               <h2>Test</h2>
-              
+              {
+        technique.map(technique => (
+          <React.Fragment key={technique.id}>
+            <p>{technique.position}</p>
+            <br />
+            <p>{technique.times_executed}</p>
+          </React.Fragment>
+        ))}
             </>
           )
         }
-      </div>
+      </>
     )
   }
 }
