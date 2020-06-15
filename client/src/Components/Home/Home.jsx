@@ -23,7 +23,7 @@ export default function Home(props) {
   return (
     
     <>
-      <h1>Welcome Back, {name}</h1>
+      <h1 className="welcome">Welcome Back, {name}</h1>
       <h2>Subs</h2>
       <h3>{totals.subs}</h3>
       <h2>Taps</h2>
