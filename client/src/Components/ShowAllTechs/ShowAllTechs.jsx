@@ -14,7 +14,6 @@ export default function ShowAllTechs(props) {
     pass: []
   }
 
-  const categorize = () => {
     techniques.forEach(technique => {
       if (technique.category.toLowerCase() === 'submission') {
         categorizedTechs.submission.push(technique.name)
@@ -46,11 +45,7 @@ export default function ShowAllTechs(props) {
       return unique.includes(pass) ? unique : [...unique, pass]
     }, [])
     categorizedTechs.pass = uniquePassList
-  }
-
-  categorize()
-  console.log(techniques)
-  console.log(categorizedTechs)
+  
 
   return (
     <>

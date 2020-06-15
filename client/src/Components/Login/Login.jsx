@@ -43,6 +43,7 @@ export default class Login extends Component {
             onChange={this.handleChange}
           />
           <button>Submit</button>
+          {/* <Link to='/home'><button>Submit</button></Link> */}
         </form>
       </div>
     )

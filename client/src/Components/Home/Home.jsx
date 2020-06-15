@@ -1,24 +1,28 @@
 import React from 'react'
 
 export default function Home(props) {
-  //Can't access name from currentUser
-  const { trainings, currentUser, history } = props;
+  const { trainings, currentUser } = props;
 
   let totals = {
     subs: 0,
     taps: 0
   }
 
+  let name = ''
+
   trainings.forEach(training => {
     totals.subs += training.subs
     totals.taps += training.taps
   })
 
-  console.log(totals)
+  if (currentUser) {
+    name = currentUser.name
+  }
 
   return (
+    
     <>
-      <h1>Welcome Back</h1>
+      <h1>Welcome Back, {name}</h1>
       <h2>Subs</h2>
       <h3>{totals.subs}</h3>
       <h2>Taps</h2>
