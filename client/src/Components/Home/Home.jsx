@@ -45,7 +45,7 @@ export default function Home(props) {
           </div>
         </div>
         <div className="button-container">
-          <button className="button">Add a New Training Session</button>
+          <button className="button">Track Training</button>
           <button className="button">Training History</button>
           <button className="button">Your Techniques</button>
         </div>

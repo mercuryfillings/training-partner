@@ -1,6 +1,6 @@
 .button {
-  height: 60px;
-  width: 315px;
+  height: 9.4vw;
+  width: 40vw;
   border-radius: 20px;
   border: none;
   background-color: #ffffff;
@@ -8,7 +8,7 @@
   margin: 10px;
   color: #006989;
   font-family: arial;
-  font-size: 22px;
+  font-size: 1.1em;
   font-weight: bold;
   padding: 10px;
   letter-spacing: -1.1px;
@@ -29,6 +29,9 @@
   height: 10vw;
   background-color: orange;
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .data-container {
@@ -40,12 +43,17 @@
   margin: 10px;
   width: 40vw;
   height: 30vw;
+  box-shadow: 0 3px 6px #888888;
 }
 
 .data {
   display: grid;
+  align-self: center;
+  margin: 1vw;
+  row-gap: 10px;
+  column-gap: 7vw;
   grid-template-columns: 10vw 10vw;
-  grid-template-rows: 10vw 10vw;
+  grid-template-rows: 4vw 10vw;
   grid-auto-flow: column;
 }
 
@@ -53,6 +61,7 @@
   font-size: 15px;
   font-weight: 400;
   font-family: arial;
+  justify-self: center;
 }
 
 .welcome {
