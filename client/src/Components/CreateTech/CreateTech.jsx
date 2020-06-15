@@ -27,7 +27,6 @@ export default class CreateTech extends Component {
           name: ""
         })
       }}>
-        <hr />
         <h3>Add New Technique</h3>
         <label htmlFor="name">Name:</label>
         <input
