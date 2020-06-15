@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get '/api/training_sessions/:user_id/:id', to: 'training_sessions#user_show'
   post '/api/techniques/', to: 'techniques#create'
   # get '/api/users/:id', to: 'users#show'
+  post '/api/training_sessions/', to: 'training_sessions#create', as: 'training_session'
   post '/api/users/', to: 'users#create', as: 'user'
   # resources :users
 end

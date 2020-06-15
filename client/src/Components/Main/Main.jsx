@@ -144,6 +144,12 @@ export default class Main extends Component {
             destroyTraining={this.destroyTraining}
           />
         )} />
+        <Route path='/new/training' render={(props) => (
+          <CreateTraining
+            {...props}
+            postTraining={this.postTraining}
+          />
+          )} />
         <Route path='/new/technique' render={(props) => (
           <CreateTech
             {...props}

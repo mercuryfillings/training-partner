@@ -13,7 +13,7 @@ export const getOneTraining = async (user_id, id) => {
 }
 
 export const createTraining = async (trainingData) => {
-  const resp = await api.post('/', { training_session: trainingData });
+  const resp = await api.post('/training_sessions/', { training_session: trainingData });
   return resp.data;
 }
 

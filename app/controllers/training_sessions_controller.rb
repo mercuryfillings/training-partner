@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class TrainingSessionsController < ApplicationController
-  before_action :authorize_request, only: %i[user_index user_show create update destroy]
+  before_action :authorize_request, only: %i[create update destroy]
   before_action :set_training_session, only: %i[update destroy]
   # lock user_index & user_show behind authorize_request
 
@@ -66,6 +66,6 @@ class TrainingSessionsController < ApplicationController
 
   # Only allow a trusted parameter "white list" through.
   def training_session_params
-    params.require(:training_session).permit(:name)
+    params.require(:training_session).permit(:rolls, :opponents, :subs, :taps)
   end
 end
