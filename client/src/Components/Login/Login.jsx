@@ -49,8 +49,8 @@ export default class Login extends Component {
                 value={password}
                 onChange={this.handleChange}
               />
-              <button className='login-button'>Submit</button>
-              {/* <Link to='/home'><button>Submit</button></Link> */}
+              <button className='login-button'>Log In</button>
+              <Link className="signup-link" to='/signup'><p>Need to Sign Up?</p></Link>
             </form>
           </div>
         </div>
