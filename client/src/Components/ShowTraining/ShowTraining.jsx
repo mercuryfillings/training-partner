@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './ShowTraining.scss'
 
 export default function ShowTraining(props) {
@@ -8,7 +9,7 @@ export default function ShowTraining(props) {
     <div className="training-body">
       <h1 className="history-title">Training History</h1>
       <div className="training-container">
-        <button className="training-button">Add Training</button>
+        <Link to="/new/training/"><button className="training-button">Add Training</button></Link> 
         <div className="training-container-inner">
       <select className="date-select">
         <option value="Past 7 Days">Past 7 Days</option>
