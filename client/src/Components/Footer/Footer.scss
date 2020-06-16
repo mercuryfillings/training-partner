@@ -1,9 +1,25 @@
 .footer {
   height: 180px;
   width: 100vw;
-  background-color: blue;
+  background-image: linear-gradient(to top right, rgba(0, 53, 69, .92), rgba(0, 105, 137, .69));
   display: flex;
   position: absolute;
   bottom: 0;
   margin: 30px 0 0 0;
+}
+
+.list {
+  list-style: none;
+  color: white;
+  text-align: right;
+}
+
+.link-container {
+  width: 95vw;
+  display: flex;
+  justify-content: flex-end;
+}
+
+li {
+  margin: 25px;
 }
