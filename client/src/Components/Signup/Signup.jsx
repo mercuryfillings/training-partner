@@ -62,7 +62,7 @@ export default class Signup extends Component {
                 onChange={this.handleChange}
               />
               <button className="signup-button">Sign Up</button>
-              <Link className="singup-link" to='/login'><p>Need to Log In?</p></Link>
+              <Link className="login-link" to='/login'><p>Need to Log In?</p></Link>
             </form>
           </div>
         </div>
