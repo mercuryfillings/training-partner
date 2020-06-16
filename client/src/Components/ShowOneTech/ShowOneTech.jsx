@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { getOneTech } from '../../Services/techniques'
+import './ShowOneTech.scss'
 
 export default class ShowOneTech extends Component {
   state = {
@@ -51,25 +52,36 @@ export default class ShowOneTech extends Component {
   render() {
     const { technique } = this.state;
     return (
-      <>
+      <div className="one-tech-page">
         {
           technique && (
-            <>
-              <h1>{technique[0].name}</h1>
-              <h2>Test</h2>
-              {
-                technique.map(technique => (
-                  <React.Fragment key={technique.id}>
-                    <p>{technique.position}</p>
-                    <button onClick={() => this.removeTechnique(technique.id)}>Delete</button>
-                    <br />
-                    <p><span onClick={() => this.handleChange(technique.id, '-')}>-</span>{technique.times_executed}<span onClick={() => this.handleChange(technique.id, '+')}>+</span></p>
-                  </React.Fragment>
-                ))}
-            </>
+            <body className="one-tech-body">
+              <h1 className="tech-name">{technique[0].name}</h1>
+              <section className="one-tech-container">
+                <div className="one-tech-inner-container">
+                  {
+                    technique.map(technique => (
+                      <React.Fragment key={technique.id}>
+                        <div className="block-container">
+                          <div className="text-box">
+                          <h2 className="position-name">{technique.position}</h2>
+                          <p className="delete" onClick={() => this.removeTechnique(technique.id)}>Delete</p>
+                        </div>
+                        <div className="circle-container">
+                          <span className="operator" onClick={() => this.handleChange(technique.id, '-')}>-</span>
+                          <span className="tech-circle"><p className="tech-num">{technique.times_executed}</p></span>
+                          <span className="operator" onClick={() => this.handleChange(technique.id, '+')}>+</span>
+                          </div>
+                          </div>
+                      </React.Fragment>
+                    ))}
+                </div>
+              </section>
+            </body>
           )
         }
-      </>
+
+      </div>
     )
   }
 }

@@ -1,0 +1,73 @@
+.tech-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.save-tech {
+  height: 6vw;
+  width: 30vw;
+  border-radius: 20px;
+  border: none;
+  background-color: #ffffff;
+  box-shadow: 0 3px 6px #888888;
+  margin: 10px;
+  color: #006989;
+  font-family: arial;
+  font-size: 1.1em;
+  font-weight: bold;
+  padding: 10px;
+  letter-spacing: -1.1px;
+  margin: 5vw 0 3vw 0;
+}
+
+.add {
+  font-family: arial;
+  font-size: 30px;
+  color: rgb(152, 194, 207);
+  font-weight: 400;
+  align-self: center;
+  padding: 0;
+  letter-spacing: -1.1px;
+}
+
+.add-page-container {
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  height: auto;
+  background-color: rgb(169, 190, 199);
+  border-radius: 20px;
+  padding: 15px;
+  align-self: center;
+  box-shadow: 0 3px 6px #888888;
+  align-items: center;
+  align-self: center;
+}
+
+.tech-input {
+  padding: 10px;
+  border-radius: 15px;
+  border-color: rgba(169, 190, 199, .5);
+  outline: none;
+  margin: 15px;
+}
+
+.add-items-container {
+  width: 85vw;
+  height: auto;
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 15px;
+  box-shadow: 0 3px 6px #888888;
+}
+
+.tech-select {
+  height: 5vw;
+  box-shadow: 0 1px 6px #888888;
+  padding: 0 15px;
+  font-family: arial;
+  margin: 15px;
+}

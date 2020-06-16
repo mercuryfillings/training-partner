@@ -4,11 +4,13 @@ import './Footer.scss'
 export default function Footer() {
   return (
     <footer className="footer">
-      <ul>
-        <li>Link 1</li>
-        <li>Link 2</li>
-        <li>Link 3</li>
-      </ul>
+      <div className="link-container">
+        <ul className="link-list">
+          <li className="footer-links">About Training Partner</li>
+          <li className="footer-links">Other Resources</li>
+          <li className="footer-links">Academies</li>
+        </ul>
+      </div>
     </footer>
   )
 }
