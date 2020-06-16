@@ -1,5 +1,6 @@
 import React from 'react'
 import './Home.scss'
+import { Link } from 'react-router-dom'
 
 export default function Home(props) {
   const { trainings, currentUser } = props;
@@ -44,9 +45,9 @@ export default function Home(props) {
           </div>
         </div>
         <div className="button-container">
-          <button className="button">Track Training</button>
-          <button className="button">Training History</button>
-          <button className="button">Your Techniques</button>
+          <Link to="/new/training"><button className="button">Track Training</button></Link>
+          <Link to="/trainings"><button className="button">Training History</button></Link>
+          <Link to="/techniques"><button className="button">Your Techniques</button></Link>
         </div>
         <div className="tech-container">
           <p className="title">Recent Techniques</p>
