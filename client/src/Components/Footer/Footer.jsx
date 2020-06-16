@@ -5,10 +5,10 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="link-container">
-        <ul className="list">
-          <li>About Training Partner</li>
-          <li>Other Resources</li>
-          <li>Academies</li>
+        <ul className="link-list">
+          <li className="footer-links">About Training Partner</li>
+          <li className="footer-links">Other Resources</li>
+          <li className="footer-links">Academies</li>
         </ul>
       </div>
     </footer>
