@@ -27,11 +27,10 @@ export default function Home(props) {
       <div className="home-container">
         <div className="data-container">
           <select className="select-menu">
-            <option></option>
-            <option></option>
-            <option></option>
-            <option></option>
-            <option></option>
+            <option className="options">All-Time Stats</option>
+            <option className="options">Past 7 Days</option>
+            <option className="options">Past 30 Days</option>
+            <option className="options">Past 365 Days</option>
           </select>
           <div className="data">
             <h2 className="item-a">Subs</h2>
@@ -50,7 +49,28 @@ export default function Home(props) {
           <button className="button">Your Techniques</button>
         </div>
         <div className="tech-container">
-
+          <p className="title">Recent Techniques</p>
+          <ul className="list">
+            <p className="title">Submissions</p>
+            <li>Armbar</li>
+            <li>Omoplata</li>
+            <li>Clock Choke</li>
+            <li>Collar Choke</li>
+          </ul>
+          <ul className="list">
+            <p className="title">Guard Passes</p>
+            <li>Toreando</li>
+            <li>Wrecking Ball</li>
+            <li>Knee Cut</li>
+            <li>Leg Drag</li>
+          </ul>
+          <ul className="list">
+            <p className="title">Sweeps</p>
+            <li>Pendulum Sweep</li>
+            <li>Hip Bump</li>
+            <li>Lumberjack</li>
+            <li>Sickle</li>
+          </ul>
         </div>
       </div>
     </div>

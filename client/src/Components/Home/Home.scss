@@ -29,6 +29,8 @@
 .select-menu {
   height: 5vw;
   box-shadow: 0 1px 6px #888888;
+  padding: 0 15px;
+  font-family: arial;
 }
 
 .home {
@@ -46,12 +48,22 @@
 
 .tech-container {
   width: 85vw;
-  height: 20vw;
+  height: 16vw;
   background-color: white;
   border-radius: 20px;
   justify-self: center;
   margin: 0 auto;
   box-shadow: 0 3px 6px #888888;
+  display: flex;
+  padding: 15px;
+}
+
+.title {
+  margin: 0 0 10px 0;
+}
+
+.list {
+  list-style: none;
 }
 
 .circle {
