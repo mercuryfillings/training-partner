@@ -26,7 +26,7 @@ export default function Home(props) {
       <h1 className="welcome">Welcome Back, {name}</h1>
       <div className="home-container">
         <div className="data-container">
-          <select>
+          <select className="select-menu">
             <option></option>
             <option></option>
             <option></option>
@@ -36,7 +36,7 @@ export default function Home(props) {
           <div className="data">
             <h2 className="item-a">Subs</h2>
             <div className="circle">
-              <h3>{totals.subs}</h3>
+              <h3 className="item-c">{totals.subs}</h3>
             </div>
             <h2 className="item-b">Taps</h2>
             <div className="circle">
@@ -48,6 +48,9 @@ export default function Home(props) {
           <button className="button">Track Training</button>
           <button className="button">Training History</button>
           <button className="button">Your Techniques</button>
+        </div>
+        <div className="tech-container">
+
         </div>
       </div>
     </div>
