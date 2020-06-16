@@ -26,6 +26,8 @@ _**TrainingPartner** is designed to help beginners better understand their journ
 
 ## MVP
 
+Deployed at: https://training-partner.surge.sh/signup
+
 > _The **TrainingPartner** MVP will allow users to register a new account, record timestamped data for individual training sessions, and build a custom library of techniques. They can then review their training sessions, and increment their successful execution of individual techniques in a live sparring environment_
 
 <br>
