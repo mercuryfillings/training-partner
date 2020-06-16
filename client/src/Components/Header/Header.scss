@@ -24,7 +24,7 @@ $logo : 35px;
 .header {
   height: 60px;
   width: 100vw;
-  background-color: blue;
+  background-image: linear-gradient(to bottom right, rgba(0, 53, 69, .92), rgba(0, 105, 137, .69));
   display: flex;
   padding: 15px;
 
@@ -32,8 +32,16 @@ $logo : 35px;
     font-size: $logo;
     justify-self: flex-start;
     align-self: center;
+    color: white;
+    letter-spacing: -1px;
+    .logo-thin {
+      font-weight: 300;
+    }
+    .logo-thick {
+      font-weight: 600;
+    }
   }
-  
+
   .burger-display {
     display: flex;
   }

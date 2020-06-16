@@ -7,7 +7,7 @@ export default function Header() {
   return (
     <header className='header'>
       <div className='logo'>
-        TrainingPartner
+        <span className="logo-thin">Training</span><span className="logo-thick">Partner</span>
       </div>
       {/* <Burger className='burger-display'/> */}
       <DesktopNav className='desktop-display'/>
