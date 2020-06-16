@@ -63,17 +63,17 @@ export default class ShowOneTech extends Component {
                     technique.map(technique => (
                       <React.Fragment key={technique.id}>
                         <div className="block-container">
-                          <div className="text-box"></div>
-                            <h2 className="position-name">{technique.position}</h2>
-                            <p className="delete" onClick={() => this.removeTechnique(technique.id)}>Delete</p>
-                          </div>
+                          <div className="text-box">
+                          <h2 className="position-name">{technique.position}</h2>
+                          <p className="delete" onClick={() => this.removeTechnique(technique.id)}>Delete</p>
+                        </div>
                         <div className="circle-container">
                           <span className="operator" onClick={() => this.handleChange(technique.id, '-')}>-</span>
-                          <span className="tech-circle">{technique.times_executed}</span>
+                          <span className="tech-circle"><p className="tech-num">{technique.times_executed}</p></span>
                           <span className="operator" onClick={() => this.handleChange(technique.id, '+')}>+</span>
-                        </div>
+                          </div>
+                          </div>
                       </React.Fragment>
-                      
                     ))}
                 </div>
               </section>
