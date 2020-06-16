@@ -3,10 +3,7 @@ import { Link } from 'react-router-dom';
 import './ShowAllTechs.scss'
 
 export default function ShowAllTechs(props) {
-  const { techniques, currentUser, destroyTechnique, history } = props;
-
-  //this is ugly and not DRY, but it works
-  //Nevermind, not updating!!
+  const { techniques } = props;
 
   let categorizedTechs = {
     sweep: [],
