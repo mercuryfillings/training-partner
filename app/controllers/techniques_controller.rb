@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class TechniquesController < ApplicationController
-  before_action :authorize_request, only: %i[user_index user_show create update destroy]
+  before_action :authorize_request, only: %i[create update destroy]
   before_action :set_technique, only: %i[update destroy]
   #lock user_index & user_show behind authorize_request
 
@@ -65,11 +65,11 @@ class TechniquesController < ApplicationController
   #may need to update the below to search by name?
   # Use callbacks to share common setup or constraints between actions.
   def set_technique
-    @technique = @current_user.technique.find(params[:id])
+    @technique = @current_user.techniques.find(params[:id])
   end
 
   # Only allow a trusted parameter "white list" through.
   def technique_params
-    params.require(:technique).permit(:name)
+    params.require(:technique).permit(:name, :category, :position, :orientation, :times_executed)
   end
 end

@@ -10,8 +10,9 @@ import ShowTraining from '../ShowTraining/ShowTraining'
 import UpdateTraining from '../UpdateTraining/UpdateTraining'
 import CreateTraining from '../CreateTraining/CreateTraining'
 import { getAllTechs, getOneTech, createTech, updateTech, deleteTech } from '../../Services/techniques'
-import { getAllTrainings, getOneTraining, createTraining, updateTraining, deleteTraining } from '../../Services/trainings'
+import { getAllTrainings, createTraining, updateTraining, deleteTraining } from '../../Services/trainings'
 import Home from '../Home/Home'
+import Footer from '../Footer/Footer'
 
 
 export default class Main extends Component {
@@ -21,25 +22,33 @@ export default class Main extends Component {
     trainings: []
   }
 
-  // componentDidMount() {
-  //   this.getTechs();
-  //   this.getTrainings();
-  // }
+  componentDidMount() {
+    if (this.props.currentUser) {
+      this.getTechs();
+      this.getTrainings();
+    }
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.currentUser !== this.props.currentUser) {
+      this.getTechs();
+      this.getTrainings();
+    }
+  }
 
   // ============================
   // ======= Techniques =========
   // ============================
 
   getTechs = async () => {
-    const techniques = await getAllTechs();
+    const techniques = await getAllTechs(this.props.currentUser.id);
     this.setState({ techniques });
   }
 
-  // May not need this
-  // getTech = async () => {
-  //   const technique = await getOneTech();
-  //   this.setState({ technique })
-  // }
+  getSingleTech = async () => {
+    const technique = await getOneTech(this.props.currentUser.id, this.state.techniques.name);
+    this.setState({ technique })
+  }
 
   postTech = async (techData) => {
     const newTechnique = await createTech(techData);
@@ -51,7 +60,7 @@ export default class Main extends Component {
   putTech = async (id, techData) => {
     const updatedTechnique = await updateTech(id, techData);
     this.setState(prevState => ({
-      techniques: prevState.techniquess.map(technique => technique.id === id ? updatedTechnique : technique)
+      techniques: prevState.techniques.map(technique => technique.id === id ? updatedTechnique : technique)
     }))
   }
 
@@ -67,7 +76,7 @@ export default class Main extends Component {
   // ============================
 
   getTrainings = async () => {
-    const trainings = await getAllTrainings();
+    const trainings = await getAllTrainings(this.props.currentUser.id);
     this.setState({ trainings });
   }
 
@@ -107,14 +116,27 @@ export default class Main extends Component {
             handleSignupSubmit={this.props.handleSignupSubmit}
           />
         )} />
-        <Route path='/techniques' render={() => (
-          <ShowAllTechs />
-        )} />
-        <Route path='/technique/:id' render={(props) => {
-          const techId = props.match.params.id;
-          return <ShowOneTech
-            techId={techId}
+        <Route path='/home' render={() => (
+          <Home
+            trainings={this.state.trainings}
             currentUser={this.props.currentUser}
+          />
+        )}
+        />
+        <Route path='/techniques' render={() => (
+          <ShowAllTechs
+            techniques={this.state.techniques}
+            currentUser={this.props.currentUser}
+            destroyTechnique={this.destroyTechnique}
+          />
+        )} />
+        <Route path='/technique/:name' render={(props) => {
+          const techName = props.match.params.name
+          return <ShowOneTech
+            techName={techName}
+            currentUser={this.props.currentUser}
+            destroyTechnique={this.destroyTechnique}
+            putTech={this.putTech}
           />
         }} />
         <Route exact path='/trainings' render={(props) => (
@@ -125,10 +147,16 @@ export default class Main extends Component {
             destroyTraining={this.destroyTraining}
           />
         )} />
+        <Route path='/new/training' render={(props) => (
+          <CreateTraining
+            {...props}
+            postTraining={this.postTraining}
+          />
+          )} />
         <Route path='/new/technique' render={(props) => (
           <CreateTech
             {...props}
-            postTechnique={this.postTechnique}
+            postTech={this.postTech}
           />
         )} />
         <Route path='/technique/:id/edit' render={(props) => {
@@ -140,7 +168,6 @@ export default class Main extends Component {
             putTechnique={this.putTechnique}
           />
         }} />
-
       </main>
     )
   }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import './Login.scss'
 
 export default class Login extends Component {
   state = {
@@ -18,32 +19,41 @@ export default class Login extends Component {
     const { email, password } = this.state;
     const { handleLoginSubmit, history } = this.props;
     return (
-      <div>
-        <form onSubmit={(e) => {
-          e.preventDefault();
-          handleLoginSubmit(this.state);
-          history.push('/');
-          this.setState({
-            email: "",
-            password: ""
-        })
-      }}>
-          <input
-            className=''
-            type='text'
-            name='email'
-            value={email}
-            onChange={this.handleChange}
-          />
-          <input
-            className=''
-            type='password'
-            name='password'
-            value={password}
-            onChange={this.handleChange}
-          />
-          <button>Submit</button>
-        </form>
+      <div className="login-page">
+        <div className="hero-container">
+        </div>
+        <h1 className="header-copy">Improve Your Game<br />Track Your Progress</h1>
+        <div className="login-body">
+          <div className="login-container">
+            <h2 className="login-header">Welcome Back</h2>
+            <form className="login-form" onSubmit={(e) => {
+              e.preventDefault();
+              handleLoginSubmit(this.state);
+              history.push('/');
+              this.setState({
+                email: "",
+                password: ""
+              })
+            }}>
+              <input
+                className='login-input'
+                type='text'
+                name='email'
+                value={email}
+                onChange={this.handleChange}
+              />
+              <input
+                className='login-input'
+                type='password'
+                name='password'
+                value={password}
+                onChange={this.handleChange}
+              />
+              <button className='login-button'>Log In</button>
+              <Link className="signup-link" to='/signup'><p>Need to Sign Up?</p></Link>
+            </form>
+          </div>
+        </div>
       </div>
     )
   }

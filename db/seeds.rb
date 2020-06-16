@@ -22,6 +22,24 @@ Technique.create!(name: 'armbar', user: @user, category: 'submission', position:
 
 Technique.create!(name: 'omoplata', user: @user, category: 'submission', position: 'guard', orientation: 'bottom', times_executed: 1)
 
+Technique.create!(name: 'omoplata', user: @user, category: 'submission', position: 'mount', orientation: 'top', times_executed: 1)
+
+Technique.create!(name: 'armbar', user: @user, category: 'submission', position: 'guard', orientation: 'bottom', times_executed: 1)
+
+Technique.create!(name: 'armbar', user: @user, category: 'submission', position: 'mount', orientation: 'top', times_executed: 1)
+
+Technique.create!(name: 'armbar', user: @user, category: 'submission', position: 'knee on belly', orientation: 'top', times_executed: 1)
+
+Technique.create!(name: 'kimura', user: @user, category: 'submission', position: 'guard', orientation: 'bottom', times_executed: 1)
+
+Technique.create!(name: 'kimura', user: @user, category: 'submission', position: 'side control', orientation: 'top', times_executed: 1)
+
+Technique.create!(name: 'clock choke', user: @user, category: 'submission', position: 'turtle', orientation: 'top', times_executed: 1)
+
+Technique.create!(name: 'pendulum sweep', user: @user, category: 'sweep', position: 'guard', orientation: 'bottom', times_executed: 1)
+
+Technique.create!(name: 'wrecking ball pass', user: @user, category: 'pass', position: 'guard', orientation: 'top', times_executed: 1)
+
 p "#{Technique.count} technique(s) created"
 
 TrainingSession.create!(user: @user, rolls: 5, opponents: 3, subs: 10, taps: 3)

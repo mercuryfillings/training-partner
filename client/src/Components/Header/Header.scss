@@ -22,14 +22,30 @@ $logo : 35px;
 // $o-fFamily : "Arial","Farah"
 
 .header {
-  height: 90px;
+  height: 60px;
   width: 100vw;
-  background-color: blue;
+  background-image: linear-gradient(to bottom right, rgba(0, 53, 69, .92), rgba(0, 105, 137, .69));
   display: flex;
+  padding: 15px;
+
   .logo {
     font-size: $logo;
     justify-self: flex-start;
+    align-self: center;
+    color: white;
+    letter-spacing: -1px;
+    .logo-thin {
+      font-weight: 300;
+    }
+    .logo-thick {
+      font-weight: 600;
+    }
+    .logo-link {
+      text-decoration: none;
+      color: white;
+    }
   }
+
   .burger-display {
     display: flex;
   }
@@ -42,6 +58,7 @@ $logo : 35px;
     }
     .desktop-display {
       display: flex;
+      align-self: center;
     }
     
   }
