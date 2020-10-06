@@ -26,6 +26,8 @@ _**TrainingPartner** is designed to help beginners better understand their journ
 
 ## MVP
 
+Deployed at: https://training-partner.surge.sh/signup
+
 > _The **TrainingPartner** MVP will allow users to register a new account, record timestamped data for individual training sessions, and build a custom library of techniques. They can then review their training sessions, and increment their successful execution of individual techniques in a live sparring environment_
 
 <br>
@@ -56,9 +58,11 @@ _**TrainingPartner** is designed to help beginners better understand their journ
 
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
-|      React       | _tktktktkt._ |
-|   React Router   | _tktktktktk._ |
-| React Burger | _tkttktktkt._ |
+|      React       | _Frontend Framework_ |
+|   React Router   | _Creates routes in React._ |
+| axios | _fetch data from API_|
+| node-sass | _allow SASS in React_ |
+
 
 <br>
 
@@ -120,20 +124,20 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Create CRUD Actions |    H     |     3 hrs      |     x hrs     |     TBD     |
-| models / migrations |    H     |     3 hrs      |     x hrs     |     TBD     |
-| Auth                |    H     |     3 hrs      |     x hrs     |     TBD     |
-| Header              |    H     |     1 hrs      |     x hrs     |     TBD     |
-| Burg                |    M     |     3 hrs      |     x hrs     |     TBD     |
-| Login page          |    H     |     3 hrs      |     x hrs     |     TBD     |
-| Register Page       |    H     |     3 hrs      |     x hrs     |     TBD     |
-| Home page           |    H     |     3 hrs      |     x hrs     |     TBD     |
-| AddTraining page.   |    H     |     3 hrs      |     x hrs     |     TBD     |
-| ViewTrainings Page  |    H     |     3 hrs      |     x hrs     |     TBD     |
-| Add Technique page  |    H     |     3 hrs      |     x hrs     |     TBD     |
-| View All Techs page |    H     |     3 hrs      |     x hrs     |     TBD     |
-| View One Tech page  |    H     |     3 hrs      |     x hrs     |     TBD     |
-| TOTAL               |          |     6 hrs      |     x hrs     |     TBD     |
+| Create CRUD Actions |    H     |     3 hrs      |     x hrs     |     10hours     |
+| models / migrations |    H     |     3 hrs      |     x hrs     |     4hours     |
+| Auth                |    H     |     3 hrs      |     x hrs     |     3hours     |
+| Header              |    H     |     1 hrs      |     x hrs     |     4hours     |
+| Burg                |    M     |     3 hrs      |     x hrs     |     n/a     |
+| Login page          |    H     |     3 hrs      |     x hrs     |     2 hours     |
+| Register Page       |    H     |     3 hrs      |     x hrs     |     1 hour     |
+| Home page           |    H     |     3 hrs      |     x hrs     |     4 hours     |
+| AddTraining page.   |    H     |     3 hrs      |     x hrs     |     4 hours     |
+| ViewTrainings Page  |    H     |     3 hrs      |     x hrs     |     5 hours     |
+| Add Technique page  |    H     |     3 hrs      |     x hrs     |     4 hours     |
+| View All Techs page |    H     |     3 hrs      |     x hrs     |     6 hours     |
+| View One Tech page  |    H     |     3 hrs      |     x hrs     |     6 hours     |
+| TOTAL               |          |     6 hrs      |     x hrs     |     53 hours     |
 
 <br>
 
@@ -175,8 +179,104 @@ src
 
 ## Code Showcase
 
-> Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
+  import React from 'react';
+  import { Link } from 'react-router-dom';
+  import './ShowAllTechs.scss'
 
-## Code Issues & Resolutions
+  export default function ShowAllTechs(props) {
+    const { techniques } = props;
 
-> Use this section to list of all major issues encountered and their resolution, if you'd like.
+    let categorizedTechs = {
+      sweep: [],
+      submission: [],
+      escape: [],
+      pass: []
+    }
+
+    techniques.forEach(technique => {
+      if (technique.category.toLowerCase() === 'submission') {
+        categorizedTechs.submission.push(technique.name)
+      } else if (technique.category.toLowerCase() === 'sweep') {
+        categorizedTechs.sweep.push(technique.name)
+      } else if (technique.category.toLowerCase() === 'escape') {
+        categorizedTechs.escape.push(technique.name)
+      } else if (technique.category.toLowerCase() === 'pass') {
+        categorizedTechs.pass.push(technique.name)
+      }
+    })
+
+    let uniqueSubList = categorizedTechs.submission.reduce((unique, submission) => {
+      return unique.includes(submission) ? unique : [...unique, submission]
+    }, [])
+    categorizedTechs.submission = uniqueSubList
+
+    let uniqueSweepList = categorizedTechs.sweep.reduce((unique, sweep) => {
+      return unique.includes(sweep) ? unique : [...unique, sweep]
+    }, [])
+    categorizedTechs.sweep = uniqueSweepList
+
+    let uniqueEscapeList = categorizedTechs.escape.reduce((unique, escape) => {
+      return unique.includes(escape) ? unique : [...unique, escape]
+    }, [])
+    categorizedTechs.escape = uniqueEscapeList
+
+    let uniquePassList = categorizedTechs.pass.reduce((unique, pass) => {
+      return unique.includes(pass) ? unique : [...unique, pass]
+    }, [])
+    categorizedTechs.pass = uniquePassList
+
+
+    return (
+      <div className="tech-page">
+        <h1 className="your-techs">Your Techniques</h1>
+        <div className="tech-page-container">
+          <Link className="column-link" to='/new/technique'><button className="add-tech">Add New Technique</button></Link>
+          <br />
+          <div className="tech-item-container">
+            <div className="column-container">
+              <h4 className="column-head">Sweeps</h4>
+              {
+                categorizedTechs.sweep.map(sweep => (
+                  <React.Fragment className="column-item" key={sweep}>
+                    <Link className="column-link" to={`/technique/${sweep}`}>{sweep}</Link>
+                    <br />
+                  </React.Fragment>
+                ))}
+            </div>
+            <div className="column-container">
+              <h4 className="column-head">Submissions</h4>
+              {
+                categorizedTechs.submission.map(submission => (
+                  <React.Fragment className="column-item" key={submission}>
+                    <Link className="column-link" to={`/technique/${submission}`}>{submission}</Link>
+                    <br />
+                  </React.Fragment>
+                ))}
+            </div>
+            <div className="column-container">
+              <h4 className="column-head">Guard Passes</h4>
+              {
+                categorizedTechs.pass.map(pass => (
+                  <React.Fragment className="column-item" key={pass}>
+                    <Link className="column-link" to={`/technique/${pass}`}>{pass}</Link>
+                    <br />
+                  </React.Fragment>
+                ))}
+            </div>
+            <div className="column-container">
+              <h4 className="column-head">Escapes</h4>
+              {
+                categorizedTechs.escape.map(escape => (
+                  <React.Fragment className="column-item" key={escape}>
+                    <Link className="column-link" to={`/technique/${escape}`}>{escape}</Link>
+                    <br />
+                  </React.Fragment>
+                ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+
