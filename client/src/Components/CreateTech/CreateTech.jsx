@@ -15,7 +15,6 @@ export default class CreateTech extends Component {
     this.setState({
       [name]: value
     })
-    console.log(this.state.category)
   }
 
   render() {
@@ -46,7 +45,7 @@ export default class CreateTech extends Component {
             <option value="DEFAULT" disabled>Category</option>
             <option value="Submission">Submission</option>
             <option value="Sweep">Sweep</option>
-            <option value="Guard Pass">Guard Pass</option>
+            <option value="Pass">Guard Pass</option>
             <option value="Escape">Escape</option>
           </select>
           <select className="tech-select" name="position" defaultValue={'DEFAULT'} onChange={this.handleChange}>

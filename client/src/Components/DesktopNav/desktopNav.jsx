@@ -2,7 +2,7 @@ import React from 'react'
 import './desktopNav.scss'
 import { Link } from 'react-router-dom'
 
-export default function DesktopNav() {
+export default function DesktopNav(props) {
 
   return (
       <nav className="nav-container">

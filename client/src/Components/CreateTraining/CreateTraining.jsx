@@ -29,10 +29,10 @@ export default class CreateTraining extends Component {
         postTraining(this.state);
         history.push('/trainings');
         this.setState({
-          rolls: "",
-          opponents: "",
-          subs: "",
-          taps: ""
+          rolls: '',
+          opponents: '',
+          subs: '',
+          taps: ''
         })
       }}>
         <h1 className="training-header">Add a Training Session</h1>
