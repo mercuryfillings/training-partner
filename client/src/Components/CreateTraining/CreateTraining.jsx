@@ -74,7 +74,7 @@ export default class CreateTraining extends Component {
               value={taps}
               onChange={this.handleChange}
             />
-            <Link to="/trainings"><button className="training-button">Save</button></Link>
+            <button className="training-button">Save</button>
           </div>
         </div>
         </form>

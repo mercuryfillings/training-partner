@@ -23,7 +23,7 @@ $logo : 35px;
 
 .header {
   height: 60px;
-  width: 100vw;
+  width: 98vw;
   background-image: linear-gradient(to bottom right, rgba(0, 53, 69, .92), rgba(0, 105, 137, .69));
   display: flex;
   padding: 15px;
@@ -44,6 +44,19 @@ $logo : 35px;
       text-decoration: none;
       color: white;
     }
+    
+  }
+
+  .logged-out-nav {
+    width: 82%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .login {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
   }
 
   .burger-display {
