@@ -1,7 +1,7 @@
 import React from 'react'
-import './Splash.scss'
+import './Hero.scss'
 
-export default function Splash() {
+export default function Hero() {
   return (
     <div className="splash-page">
       <div className="hero-container">

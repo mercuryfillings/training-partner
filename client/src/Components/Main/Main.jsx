@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Route, withRouter } from 'react-router-dom';
 import Login from '../Login/Login'
 import Signup from '../Signup/Signup';
-import Splash from '../Splash/Splash'
+import Hero from '../Hero/Hero'
 import ShowOneTech from '../ShowOneTech/ShowOneTech'
 import ShowAllTechs from '../ShowAllTechs/ShowAllTechs'
 import CreateTech from '../CreateTech/CreateTech'
@@ -110,7 +110,7 @@ class Main extends Component {
     return (
       <main>
         <Route path='/' render={() => (
-          !this.props.currentUser ? <Splash />
+          !this.props.currentUser ? <Hero />
             : ''
         )} />
         <Route path='/login' render={(props) => (

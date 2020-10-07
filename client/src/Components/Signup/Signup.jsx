@@ -26,7 +26,7 @@ export default class Signup extends Component {
             <form className="signup-form" onSubmit={(e) => {
               e.preventDefault();
               handleSignupSubmit(this.state);
-              history.push('/');
+              history.push('/home');
               this.setState({
                 name: "",
                 email: "",

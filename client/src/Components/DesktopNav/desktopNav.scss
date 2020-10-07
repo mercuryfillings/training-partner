@@ -18,5 +18,17 @@
     color: white;
     text-decoration: none;
   }
+
+  .nav-link-button {
+    background: none;
+    border: none;
+    font-size: 15px;
+    color: white;
+    outline: none;
+  }
+
+  .nav-link-button:hover {
+    cursor: pointer;
+  }
 }
 }
