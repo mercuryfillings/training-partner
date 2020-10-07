@@ -19,17 +19,13 @@ export default class Login extends Component {
     const { email, password } = this.state;
     const { handleLoginSubmit, history } = this.props;
     return (
-      <div className="login-page">
-        <div className="hero-container">
-        </div>
-        <h1 className="header-copy">Improve Your Game<br />Track Your Progress</h1>
         <div className="login-body">
           <div className="login-container">
             <h2 className="login-header">Welcome Back</h2>
             <form className="login-form" onSubmit={(e) => {
               e.preventDefault();
               handleLoginSubmit(this.state);
-              history.push('/');
+              history.push('/home');
               this.setState({
                 email: "",
                 password: ""
@@ -54,7 +50,6 @@ export default class Login extends Component {
             </form>
           </div>
         </div>
-      </div>
     )
   }
 }

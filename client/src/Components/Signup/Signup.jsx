@@ -20,10 +20,6 @@ export default class Signup extends Component {
     const { name, email, password } = this.state;
     const { handleSignupSubmit, history } = this.props;
     return (
-      <div className="signup-page">
-        <div className="hero-container">
-        </div>
-        <h1 className="header-copy">Improve Your Game<br />Track Your Progress</h1>
         <div className="signup-body">
           <div className="signup-container">
           <h2 className="signup-header">Get Started</h2>
@@ -66,7 +62,6 @@ export default class Signup extends Component {
             </form>
           </div>
         </div>
-      </div>
     )
   }
 }

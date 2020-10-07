@@ -4,8 +4,9 @@ import Header from './Components/Header/Header'
 import Main from './Components/Main/Main'
 import Footer from './Components/Footer/Footer'
 import { loginUser, registerUser, removeToken, verifyUser } from './Services/auth'
+import { withRouter } from 'react-router-dom';
 
-export default class App extends Component {
+class App extends Component {
   state = {
     currentUser: null
   }
@@ -30,6 +31,7 @@ export default class App extends Component {
     })
     localStorage.clear();
     removeToken();
+    window.location.reload();
   }
 
   handleVerify = async () => {
@@ -48,6 +50,7 @@ export default class App extends Component {
           handleLoginSubmit={this.handleLoginSubmit}
           handleSignupSubmit={this.handleSignupSubmit}
           currentUser={this.state.currentUser}
+          handleLogout={this.handleLogout}
         />
         <Footer />
       </>
@@ -55,3 +58,4 @@ export default class App extends Component {
   }
 }
 
+export default withRouter(App)

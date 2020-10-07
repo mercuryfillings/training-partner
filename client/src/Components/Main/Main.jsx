@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import { Route } from 'react-router-dom';
+import { Route, withRouter } from 'react-router-dom';
 import Login from '../Login/Login'
 import Signup from '../Signup/Signup';
+import Splash from '../Splash/Splash'
 import ShowOneTech from '../ShowOneTech/ShowOneTech'
 import ShowAllTechs from '../ShowAllTechs/ShowAllTechs'
 import CreateTech from '../CreateTech/CreateTech'
@@ -15,24 +16,28 @@ import Home from '../Home/Home'
 import Footer from '../Footer/Footer'
 
 
-export default class Main extends Component {
+class Main extends Component {
 
   state = {
     techniques: [],
     trainings: []
   }
 
-  componentDidMount() {
-    if (this.props.currentUser) {
-      this.getTechs();
-      this.getTrainings();
-    }
-  }
+  // componentDidMount() {
+  //   if (this.props.currentUser) {
+  //     this.getTechs();
+  //     this.getTrainings();
+  //   }
+  // }
 
   componentDidUpdate(prevProps) {
     if (prevProps.currentUser !== this.props.currentUser) {
-      this.getTechs();
-      this.getTrainings();
+      if (!this.props.currentUser) {
+        this.props.history.push('/')
+      } else {
+          this.getTechs();
+          this.getTrainings();
+      }
     }
   }
 
@@ -104,6 +109,10 @@ export default class Main extends Component {
   render() {
     return (
       <main>
+        <Route path='/' render={() => (
+          !this.props.currentUser ? <Splash />
+            : ''
+        )} />
         <Route path='/login' render={(props) => (
           <Login
             {...props}
@@ -117,10 +126,12 @@ export default class Main extends Component {
           />
         )} />
         <Route path='/home' render={() => (
-          <Home
+          !this.props.currentUser ?
+            '':
+            <Home
             trainings={this.state.trainings}
             currentUser={this.props.currentUser}
-          />
+            />
         )}
         />
         <Route path='/techniques' render={() => (
@@ -172,3 +183,5 @@ export default class Main extends Component {
     )
   }
 }
+
+export default withRouter(Main)
