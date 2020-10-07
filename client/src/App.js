@@ -16,13 +16,23 @@ class App extends Component {
   }
 
   handleLoginSubmit = async (loginData) => {
-    const currentUser = await loginUser(loginData);
-    this.setState({ currentUser });
+    try {
+      const currentUser = await loginUser(loginData);
+      this.setState({ currentUser });
+    } catch (error) {
+      window.alert("Incorrect username or password. Please try again.");
+      console.log(error)
+    }
   }
 
   handleSignupSubmit = async (signupData) => {
-    const currentUser = await registerUser(signupData);
-    this.setState({ currentUser });
+    try {
+      const currentUser = await registerUser(signupData);
+      this.setState({ currentUser });
+    } catch (error) {
+      window.alert("Username or Email address already in use. Please try another.");
+      console.log(error)
+    }
   }
 
   handleLogout = () => {

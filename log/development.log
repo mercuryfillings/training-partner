@@ -58101,3 +58101,119 @@ Processing by TechniquesController#user_index as HTML
 Completed 200 OK in 19ms (Views: 16.1ms | ActiveRecord: 1.2ms | Allocations: 4420)
 
 
+Started POST "/api/auth/login" for ::1 at 2020-10-07 19:44:20 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"auth"=>{"email"=>"scott.delbango@gmail.com", "password"=>"[FILTERED]"}, "authentication"=>{"auth"=>{"email"=>"scott.delbango@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "scott.delbango@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:8:in `login'
+Completed 200 OK in 254ms (Views: 0.4ms | ActiveRecord: 1.0ms | Allocations: 1034)
+
+
+Started GET "/api/training_sessions/1" for ::1 at 2020-10-07 19:44:20 -0400
+Started GET "/api/techniques/1" for ::1 at 2020-10-07 19:44:20 -0400
+Processing by TechniquesController#user_index as HTML
+  Parameters: {"user_id"=>"1"}
+Processing by TrainingSessionsController#user_index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mTechnique Load (1.3ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques" WHERE "techniques"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/techniques_controller.rb:19:in `user_index'
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 1.3ms | Allocations: 4516)
+
+
+  [1m[36mTrainingSession Load (7.4ms)[0m  [1m[34mSELECT "training_sessions".* FROM "training_sessions" WHERE "training_sessions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/training_sessions_controller.rb:25:in `user_index'
+Completed 200 OK in 17ms (Views: 9.1ms | ActiveRecord: 7.4ms | Allocations: 6194)
+
+
+Started POST "/api/auth/login" for ::1 at 2020-10-07 19:47:54 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"auth"=>{"email"=>"scott.delbango@gmail.com", "password"=>"[FILTERED]"}, "authentication"=>{"auth"=>{"email"=>"scott.delbango@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "scott.delbango@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:8:in `login'
+Completed 401 Unauthorized in 287ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 817)
+
+
+Started POST "/api/auth/login" for ::1 at 2020-10-07 19:48:39 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"auth"=>{"email"=>"scott.delbango@gmail.com", "password"=>"[FILTERED]"}, "authentication"=>{"auth"=>{"email"=>"scott.delbango@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "scott.delbango@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:8:in `login'
+Completed 200 OK in 268ms (Views: 0.4ms | ActiveRecord: 3.3ms | Allocations: 1030)
+
+
+Started GET "/api/techniques/1" for ::1 at 2020-10-07 19:48:39 -0400
+Processing by TechniquesController#user_index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mTechnique Load (1.3ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques" WHERE "techniques"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/techniques_controller.rb:19:in `user_index'
+Completed 200 OK in 31ms (Views: 28.8ms | ActiveRecord: 1.3ms | Allocations: 4356)
+
+
+Started GET "/api/training_sessions/1" for ::1 at 2020-10-07 19:48:39 -0400
+Processing by TrainingSessionsController#user_index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mTrainingSession Load (0.3ms)[0m  [1m[34mSELECT "training_sessions".* FROM "training_sessions" WHERE "training_sessions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/training_sessions_controller.rb:25:in `user_index'
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.3ms | Allocations: 1799)
+
+
+Started POST "/api/auth/login" for ::1 at 2020-10-07 19:49:51 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"auth"=>{"email"=>"scott.delbango@gmail.com", "password"=>"[FILTERED]"}, "authentication"=>{"auth"=>{"email"=>"scott.delbango@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "scott.delbango@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:8:in `login'
+Completed 401 Unauthorized in 273ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 818)
+
+
+Started POST "/api/auth/login" for ::1 at 2020-10-07 19:53:00 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"auth"=>{"email"=>"scott.delbango@gmail.com", "password"=>"[FILTERED]"}, "authentication"=>{"auth"=>{"email"=>"scott.delbango@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "scott.delbango@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:8:in `login'
+Completed 401 Unauthorized in 336ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 817)
+
+
+Started POST "/api/users/" for ::1 at 2020-10-07 19:55:43 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"name"=>"Scott Delbango", "email"=>"scott.delbango@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "scott.delbango@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Completed 422 Unprocessable Entity in 371ms (Views: 0.3ms | ActiveRecord: 1.1ms | Allocations: 4327)
+
+
+Started POST "/api/auth/login" for ::1 at 2020-10-07 19:55:53 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"auth"=>{"email"=>"scott.delbango@gmail.com", "password"=>"[FILTERED]"}, "authentication"=>{"auth"=>{"email"=>"scott.delbango@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "scott.delbango@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:8:in `login'
+Completed 401 Unauthorized in 272ms (Views: 0.2ms | ActiveRecord: 3.2ms | Allocations: 818)
+
+
+Started POST "/api/auth/login" for ::1 at 2020-10-07 19:56:05 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"auth"=>{"email"=>"scott.delbango@gmail.com", "password"=>"[FILTERED]"}, "authentication"=>{"auth"=>{"email"=>"scott.delbango@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "scott.delbango@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:8:in `login'
+Completed 200 OK in 264ms (Views: 1.1ms | ActiveRecord: 0.5ms | Allocations: 1030)
+
+
+Started GET "/api/techniques/1" for ::1 at 2020-10-07 19:56:05 -0400
+Started GET "/api/training_sessions/1" for ::1 at 2020-10-07 19:56:05 -0400
+Processing by TrainingSessionsController#user_index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mTrainingSession Load (0.9ms)[0m  [1m[34mSELECT "training_sessions".* FROM "training_sessions" WHERE "training_sessions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/training_sessions_controller.rb:25:in `user_index'
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.9ms | Allocations: 1800)
+
+
+Processing by TechniquesController#user_index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mTechnique Load (1.1ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques" WHERE "techniques"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/techniques_controller.rb:19:in `user_index'
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 1.3ms | Allocations: 4420)
+
+
