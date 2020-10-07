@@ -17,7 +17,8 @@ export default function DesktopNav(props) {
           <Link className="nav-link" to='/trainings'>Training History</Link>
         </li>
         <li className="nav-li">
-          <Link className="nav-link" to='/login' onClick={() => localStorage.clear()}>Log Out</Link>
+          <button className="nav-link" to='/login' onClick={() => props.handleLogout()}>Log Out</button>
+          {/* <Link className="nav-link" to='/login' onClick={() => localStorage.clear()}>Log Out</Link> */}
         </li>
         </ul>
       </nav>
