@@ -32,17 +32,42 @@
   justify-content: center;
 }
 
-.training-container-inner {
+.training-container-inner-top {
   width: 85vw;
   height: auto;
+  padding: 5vw;
   background-color: white;
   border-radius: 20px;
   justify-self: center;
   margin: 0 auto;
   box-shadow: 0 3px 6px #888888;
+}
+
+.training-container-inner-bottom {
+  width: 75vw;
+  background-color: white;
+  justify-self: flex-start;
   display: flex;
-  flex-direction: column;
-  padding: 5vw;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.training-card {
+  width: 150px;
+  height: 150px;
+  margin: 20px;
+  padding: 15px;
+  background-color: rgb(251, 249, 249);
+  border-radius: 20px;
+  box-shadow: 0 3px 6px #888888;
+}
+
+.training-card:hover {
+  width: 153px;
+  height: 153px;
+  font-size: 1.3em;
+  box-shadow: 0 15px 15px #c2c0c0;
+  transition: .3s;
 }
 
 .date-select {
@@ -64,7 +89,7 @@
   font-size: 16px;
   font-weight: 700;
   color: #006989;
-  margin: 20px 0;
+  margin: 0px 0px 20px 0px;
 }
 
 .history-title {
