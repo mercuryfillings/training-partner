@@ -61,6 +61,14 @@
   text-decoration: none;
   color: #006989;
   font-family: arial;
+  text-transform: capitalize;
+  padding: 1em;
+  border-radius: 1em;
+}
+
+.column-link:hover {
+  background: rgb(200, 224, 235);
+  transition: .5s;
 }
 
 .tech-page {

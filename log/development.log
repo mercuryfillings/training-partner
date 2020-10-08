@@ -58217,3 +58217,191 @@ Processing by TechniquesController#user_index as HTML
 Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 1.3ms | Allocations: 4420)
 
 
+Started GET "/api/auth/verify" for ::1 at 2020-10-07 19:59:32 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 27ms (Views: 5.0ms | ActiveRecord: 1.4ms | Allocations: 887)
+
+
+Started GET "/api/techniques/1" for ::1 at 2020-10-07 19:59:32 -0400
+Started GET "/api/training_sessions/1" for ::1 at 2020-10-07 19:59:32 -0400
+Processing by TechniquesController#user_index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mTechnique Load (11.4ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques" WHERE "techniques"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/techniques_controller.rb:19:in `user_index'
+Processing by TrainingSessionsController#user_index as HTML
+Completed 200 OK in 37ms (Views: 22.2ms | ActiveRecord: 11.4ms | Allocations: 4915)
+
+
+  Parameters: {"user_id"=>"1"}
+  [1m[36mTrainingSession Load (2.3ms)[0m  [1m[34mSELECT "training_sessions".* FROM "training_sessions" WHERE "training_sessions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/training_sessions_controller.rb:25:in `user_index'
+Completed 200 OK in 14ms (Views: 10.8ms | ActiveRecord: 2.3ms | Allocations: 1799)
+
+
+Started GET "/api/auth/verify" for ::1 at 2020-10-07 19:59:39 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 6ms (Views: 0.7ms | ActiveRecord: 1.7ms | Allocations: 887)
+
+
+Started GET "/api/techniques/1" for ::1 at 2020-10-07 19:59:39 -0400
+Started GET "/api/training_sessions/1" for ::1 at 2020-10-07 19:59:39 -0400
+Processing by TrainingSessionsController#user_index as HTML
+  Parameters: {"user_id"=>"1"}
+Processing by TechniquesController#user_index as HTML
+  [1m[36mTrainingSession Load (1.7ms)[0m  [1m[34mSELECT "training_sessions".* FROM "training_sessions" WHERE "training_sessions"."user_id" = $1[0m  [["user_id", 1]]
+  Parameters: {"user_id"=>"1"}
+  ↳ app/controllers/training_sessions_controller.rb:25:in `user_index'
+Completed 200 OK in 11ms (Views: 8.4ms | ActiveRecord: 1.7ms | Allocations: 2567)
+
+
+  [1m[36mTechnique Load (4.0ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques" WHERE "techniques"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/techniques_controller.rb:19:in `user_index'
+Completed 200 OK in 19ms (Views: 14.2ms | ActiveRecord: 4.0ms | Allocations: 5523)
+
+
+Started GET "/api/auth/verify" for ::1 at 2020-10-07 20:00:20 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (47.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 51ms (Views: 0.5ms | ActiveRecord: 47.7ms | Allocations: 884)
+
+
+Started GET "/api/techniques/1" for ::1 at 2020-10-07 20:00:20 -0400
+Processing by TechniquesController#user_index as HTML
+  Parameters: {"user_id"=>"1"}
+Started GET "/api/training_sessions/1" for ::1 at 2020-10-07 20:00:20 -0400
+  [1m[36mTechnique Load (2.3ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques" WHERE "techniques"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/techniques_controller.rb:19:in `user_index'
+Completed 200 OK in 22ms (Views: 18.7ms | ActiveRecord: 2.3ms | Allocations: 4537)
+
+
+Processing by TrainingSessionsController#user_index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mTrainingSession Load (2.4ms)[0m  [1m[34mSELECT "training_sessions".* FROM "training_sessions" WHERE "training_sessions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/training_sessions_controller.rb:25:in `user_index'
+Completed 200 OK in 10ms (Views: 7.0ms | ActiveRecord: 2.4ms | Allocations: 1799)
+
+
+Started GET "/api/auth/verify" for ::1 at 2020-10-07 20:00:44 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 884)
+
+
+Started GET "/api/techniques/1" for ::1 at 2020-10-07 20:00:44 -0400
+Started GET "/api/training_sessions/1" for ::1 at 2020-10-07 20:00:44 -0400
+Processing by TechniquesController#user_index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mTechnique Load (6.4ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques" WHERE "techniques"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/techniques_controller.rb:19:in `user_index'
+Processing by TrainingSessionsController#user_index as HTML
+Completed 200 OK in 28ms (Views: 20.8ms | ActiveRecord: 6.4ms | Allocations: 4914)
+
+
+  Parameters: {"user_id"=>"1"}
+  [1m[36mTrainingSession Load (14.9ms)[0m  [1m[34mSELECT "training_sessions".* FROM "training_sessions" WHERE "training_sessions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/training_sessions_controller.rb:25:in `user_index'
+Completed 200 OK in 39ms (Views: 23.2ms | ActiveRecord: 14.9ms | Allocations: 1802)
+
+
+Started GET "/api/techniques/1/clock%20choke" for ::1 at 2020-10-07 20:01:39 -0400
+Processing by TechniquesController#user_show as HTML
+  Parameters: {"user_id"=>"1", "name"=>"clock choke"}
+  [1m[36mTechnique Load (4.4ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques" WHERE "techniques"."user_id" = $1 AND "techniques"."name" = $2[0m  [["user_id", 1], ["name", "clock choke"]]
+  ↳ app/controllers/techniques_controller.rb:26:in `user_show'
+Completed 200 OK in 13ms (Views: 7.3ms | ActiveRecord: 4.4ms | Allocations: 1121)
+
+
+Started GET "/api/techniques/1/omoplata" for ::1 at 2020-10-07 20:03:27 -0400
+Processing by TechniquesController#user_show as HTML
+  Parameters: {"user_id"=>"1", "name"=>"omoplata"}
+  [1m[36mTechnique Load (2.1ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques" WHERE "techniques"."user_id" = $1 AND "techniques"."name" = $2[0m  [["user_id", 1], ["name", "omoplata"]]
+  ↳ app/controllers/techniques_controller.rb:26:in `user_show'
+Completed 200 OK in 34ms (Views: 21.9ms | ActiveRecord: 2.1ms | Allocations: 1117)
+
+
+Started GET "/api/techniques/1/Darce%20Choke" for ::1 at 2020-10-07 20:03:48 -0400
+Processing by TechniquesController#user_show as HTML
+  Parameters: {"user_id"=>"1", "name"=>"Darce Choke"}
+  [1m[36mTechnique Load (0.5ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques" WHERE "techniques"."user_id" = $1 AND "techniques"."name" = $2[0m  [["user_id", 1], ["name", "Darce Choke"]]
+  ↳ app/controllers/techniques_controller.rb:26:in `user_show'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.5ms | Allocations: 1117)
+
+
+Started GET "/api/techniques/1/Brabo%20Choke" for ::1 at 2020-10-07 20:03:51 -0400
+Processing by TechniquesController#user_show as HTML
+  Parameters: {"user_id"=>"1", "name"=>"Brabo Choke"}
+  [1m[36mTechnique Load (0.5ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques" WHERE "techniques"."user_id" = $1 AND "techniques"."name" = $2[0m  [["user_id", 1], ["name", "Brabo Choke"]]
+  ↳ app/controllers/techniques_controller.rb:26:in `user_show'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.5ms | Allocations: 1117)
+
+
+Started GET "/api/techniques/1/wrecking%20ball%20pass" for ::1 at 2020-10-07 20:04:00 -0400
+Processing by TechniquesController#user_show as HTML
+  Parameters: {"user_id"=>"1", "name"=>"wrecking ball pass"}
+  [1m[36mTechnique Load (0.5ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques" WHERE "techniques"."user_id" = $1 AND "techniques"."name" = $2[0m  [["user_id", 1], ["name", "wrecking ball pass"]]
+  ↳ app/controllers/techniques_controller.rb:26:in `user_show'
+Completed 200 OK in 6ms (Views: 4.1ms | ActiveRecord: 0.5ms | Allocations: 1117)
+
+
+Started GET "/api/techniques/1/QUALL%20SWEEP" for ::1 at 2020-10-07 20:04:43 -0400
+Processing by TechniquesController#user_show as HTML
+  Parameters: {"user_id"=>"1", "name"=>"QUALL SWEEP"}
+  [1m[36mTechnique Load (0.8ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques" WHERE "techniques"."user_id" = $1 AND "techniques"."name" = $2[0m  [["user_id", 1], ["name", "QUALL SWEEP"]]
+  ↳ app/controllers/techniques_controller.rb:26:in `user_show'
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.8ms | Allocations: 1117)
+
+
+Started GET "/api/techniques/1/omoplata" for ::1 at 2020-10-07 20:04:46 -0400
+Processing by TechniquesController#user_show as HTML
+  Parameters: {"user_id"=>"1", "name"=>"omoplata"}
+  [1m[36mTechnique Load (0.8ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques" WHERE "techniques"."user_id" = $1 AND "techniques"."name" = $2[0m  [["user_id", 1], ["name", "omoplata"]]
+  ↳ app/controllers/techniques_controller.rb:26:in `user_show'
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.8ms | Allocations: 1117)
+
+
+Started GET "/api/techniques/1/wrecking%20ball%20pass" for ::1 at 2020-10-07 20:04:49 -0400
+Processing by TechniquesController#user_show as HTML
+  Parameters: {"user_id"=>"1", "name"=>"wrecking ball pass"}
+  [1m[36mTechnique Load (0.9ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques" WHERE "techniques"."user_id" = $1 AND "techniques"."name" = $2[0m  [["user_id", 1], ["name", "wrecking ball pass"]]
+  ↳ app/controllers/techniques_controller.rb:26:in `user_show'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.9ms | Allocations: 1117)
+
+
+Started GET "/api/techniques/1/armbar" for ::1 at 2020-10-07 20:04:55 -0400
+Processing by TechniquesController#user_show as HTML
+  Parameters: {"user_id"=>"1", "name"=>"armbar"}
+  [1m[36mTechnique Load (0.3ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques" WHERE "techniques"."user_id" = $1 AND "techniques"."name" = $2[0m  [["user_id", 1], ["name", "armbar"]]
+  ↳ app/controllers/techniques_controller.rb:26:in `user_show'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.3ms | Allocations: 1278)
+
+
+Started POST "/api/auth/login" for ::1 at 2020-10-07 20:05:47 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"auth"=>{"email"=>"scott.delbango@gmail.com", "password"=>"[FILTERED]"}, "authentication"=>{"auth"=>{"email"=>"scott.delbango@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "scott.delbango@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:8:in `login'
+Completed 200 OK in 259ms (Views: 0.7ms | ActiveRecord: 0.6ms | Allocations: 1033)
+
+
+Started GET "/api/training_sessions/1" for ::1 at 2020-10-07 20:05:47 -0400
+Started GET "/api/techniques/1" for ::1 at 2020-10-07 20:05:47 -0400
+Processing by TrainingSessionsController#user_index as HTML
+  Parameters: {"user_id"=>"1"}
+Processing by TechniquesController#user_index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mTrainingSession Load (1.8ms)[0m  [1m[34mSELECT "training_sessions".* FROM "training_sessions" WHERE "training_sessions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/training_sessions_controller.rb:25:in `user_index'
+Completed 200 OK in 7ms (Views: 4.1ms | ActiveRecord: 1.8ms | Allocations: 2218)
+
+
+  [1m[36mTechnique Load (3.9ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques" WHERE "techniques"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/techniques_controller.rb:19:in `user_index'
+Completed 200 OK in 15ms (Views: 10.9ms | ActiveRecord: 3.9ms | Allocations: 6194)
+
+
