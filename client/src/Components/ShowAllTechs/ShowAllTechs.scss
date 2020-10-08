@@ -7,25 +7,14 @@
   padding: 0;
   letter-spacing: -1.1px;
 }
-
-.add-tech {
-  height: 6vw;
-  width: 30vw;
-  border-radius: 20px;
-  border: none;
-  background-color: #ffffff;
-  box-shadow: 0 3px 6px #888888;
-  margin: 10px;
-  color: #006989;
-  font-family: arial;
-  font-size: 1.1em;
-  font-weight: bold;
-  padding: 10px;
-  letter-spacing: -1.1px;
+.tech-page {
+  display: flex;
+  flex-direction: column;
 }
 
 .tech-page-container {
   display: flex;
+  flex-direction: column;
   width: 90vw;
   height: auto;
   background-color: rgb(169, 190, 199);
@@ -33,19 +22,42 @@
   padding: 15px;
   align-self: center;
   box-shadow: 0 3px 6px #888888;
-  flex-wrap: wrap;
+  .button-container {
+    display: flex;
+    height: auto;
+    width: 90vw;
+    margin: 0;
+    .add-tech {
+      height: 6vw;
+      width: 30vw;
+      border-radius: 20px;
+      border: none;
+      background-color: #ffffff;
+      box-shadow: 0 3px 6px #888888;
+      margin: 10px;
+      color: #006989;
+      font-family: arial;
+      font-size: 1.1em;
+      font-weight: bold;
+      padding: 10px;
+      letter-spacing: -1.1px;
+      justify-self: center;
+    }
+  }
+  .tech-item-container {
+    width: 85vw;
+    height: auto;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    box-shadow: 0 3px 6px #888888;
+    align-self: center;
+  }
 }
 
-.tech-item-container {
-  width: 85vw;
-  height: auto;
-  background-color: white;
-  border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  padding: 15px;
-  box-shadow: 0 3px 6px #888888;
-}
+
 
 .column-container {
   margin: 15px;
@@ -69,12 +81,6 @@
 .column-link:hover {
   background: rgb(200, 224, 235);
   transition: .5s;
-}
-
-.tech-page {
-  display: flex;
-  flex-direction: column;
-  margin: 15px;
 }
 
 .column-container {

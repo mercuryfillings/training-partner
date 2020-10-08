@@ -34,8 +34,10 @@ export default class CreateTraining extends Component {
           subs: '',
           taps: ''
         })
-      }}>
-        <h1 className="training-header">Add a Training Session</h1>
+          }}>
+        <div className="header-container">
+          <h1 className="training-header">Add a Training Session</h1>
+        </div>
         <div className="create-training-body">
           <div className="create-training-inner">
             <input

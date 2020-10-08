@@ -49,7 +49,9 @@ export default function ShowAllTechs(props) {
     <div className="tech-page">
       <h1 className="your-techs">Your Techniques</h1>
       <div className="tech-page-container">
-        <Link to='/new/technique'><button className="add-tech">Add New Technique</button></Link>
+        <div className="button-container">
+          <Link to='/new/technique'><button className="add-tech">Add New Technique</button></Link>
+        </div>
         <br />
         <div className="tech-item-container">
           <div className="column-container">
