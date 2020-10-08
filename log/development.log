@@ -59141,3 +59141,40 @@ Completed 200 OK in 12ms (Views: 6.1ms | ActiveRecord: 5.3ms | Allocations: 1799
 Completed 200 OK in 26ms (Views: 7.1ms | ActiveRecord: 17.9ms | Allocations: 6394)
 
 
+Started GET "/api/auth/verify" for ::1 at 2020-10-07 20:44:41 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 12ms (Views: 1.2ms | ActiveRecord: 1.3ms | Allocations: 972)
+
+
+Started GET "/api/training_sessions/1" for ::1 at 2020-10-07 20:44:42 -0400
+Started GET "/api/techniques/1" for ::1 at 2020-10-07 20:44:42 -0400
+Processing by TechniquesController#user_index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mTechnique Load (25.7ms)[0m  [1m[34mSELECT "techniques".* FROM "techniques" WHERE "techniques"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/techniques_controller.rb:19:in `user_index'
+Completed 200 OK in 43ms (Views: 15.9ms | ActiveRecord: 25.7ms | Allocations: 4335)
+
+
+Processing by TrainingSessionsController#user_index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mTrainingSession Load (0.7ms)[0m  [1m[34mSELECT "training_sessions".* FROM "training_sessions" WHERE "training_sessions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/training_sessions_controller.rb:25:in `user_index'
+Completed 200 OK in 8ms (Views: 5.4ms | ActiveRecord: 1.0ms | Allocations: 1884)
+
+
+Started POST "/api/training_sessions/" for ::1 at 2020-10-07 20:45:11 -0400
+Processing by TrainingSessionsController#create as HTML
+  Parameters: {"training_session"=>{"rolls"=>"10", "opponents"=>"10", "subs"=>"8", "taps"=>"2"}}
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/training_sessions_controller.rb:39:in `create'
+  [1m[36mTrainingSession Create (4.4ms)[0m  [1m[32mINSERT INTO "training_sessions" ("rolls", "opponents", "subs", "taps", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["rolls", 10], ["opponents", 10], ["subs", 8], ["taps", 2], ["created_at", "2020-10-08 00:45:11.753519"], ["updated_at", "2020-10-08 00:45:11.753519"], ["user_id", 1]]
+  ↳ app/controllers/training_sessions_controller.rb:39:in `create'
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/training_sessions_controller.rb:39:in `create'
+Completed 201 Created in 30ms (Views: 0.9ms | ActiveRecord: 9.7ms | Allocations: 3339)
+
+
